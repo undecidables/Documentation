@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper,titlepage]{article}
+
+\usepackage{pdflscape}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+
+\graphicspath{ {./images/} }
+
+
+
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}
+}
+
+\begin{document}
+
+\title{COSBAS Requirements Documentation}
+\subtitle{ Git: \url{https://github.com/undecidables/Requirements-Documentation}}
+
+\author{\textbf{\textless undecidables\textgreater}\\
+Elzahn Botha \emph{}\\
+Jason Richard Evans \emph{u13032608}\\
+Renette Ros \emph{}\\
+Szymon Ziolkowski \emph{}\\
+Tienie Pritchard \emph{}\\
+Vivian Venter \emph{}\\
+}
+    
+\date{\textbf{March 2015}}
+
+\maketitle
+
+\tableofcontents
+\pagebreak
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+%I strongly recomend using seperate tex files for each of the following sections and just include them here.
+\section{Introduction}
+\section{Vision}
+\section{Background}
+\section{Architectural Requirements}
+	\subsection{Access Channel Requirements}
+	\subsection{Quality Requirements}
+	\subsection{Integration Requirements}
+	\subsection{Architectural Constraints}
+\section{Functional Requirements}
+	\subsection{Use Case Prioratization}
+	\subsection{Services Contracts}
+	\subsection{Required Functionality}
+	\subsection{Process Specifications}
+	\subsection{Domain Model}
+\section{Open Issues}
+	
+	
+\end{document}
