@@ -1,0 +1,41 @@
+Group discussion on 21 May 2015
+
+Use Case Identification...
+# Use cases for biometrics.
+	1.  Register User.
+		* Start Registration Service (Threads)
+		* Get users info.
+		* Validation of user info and registration. (Does the user exist already?)
+		* Persist details to database. (Own database)
+		* Start authentication service by some means of input.
+
+	2. Authenticate User. (Perminant and Temporary user.)
+		* Get user info (picture, code or other biometric stuffies).
+		* Send information to server.
+		* Wait for response and act on it. (Tienie)
+		* Responses and actions written to activity log.
+
+	3. Logging out ?
+		* Get user info.
+		* Notify Server.
+
+#Web server use cases
+	(split between client and lecturer)
+	1. Logging In (Staff)
+		* Get Information
+		* Authentication
+	2. Request appointment (for student)
+		* Getting and sending information of "student" if not logged in.
+	3. Cancelling Appointements
+		* Both parties notified.
+		* Temporary access revoked.
+	4. Setting of availablility
+		* On which linked calander.
+	5. View Calander on client side.
+	6. Approve Appointment
+		* Send notification
+		* Send temporary access code.
+	7. Download report.
+	8. Query Report.
+
+
