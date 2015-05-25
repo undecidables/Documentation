@@ -2,41 +2,45 @@ Group discussion on 21 May 2015
 
 Use Case Identification...
 # Use cases for biometrics.
-	1.  Register User.
+	1.  Register User. -- Vivian
 		* Start Registration Service (Threads)
 		* Get users info.
 		* Validation of user info and registration. (Does the user exist already?)
 		* Persist details to database. (Own database)
 		* Start authentication service by some means of input.
 
-	2. Authenticate User. (Perminant and Temporary user.)
+	2. Authenticate User.  -- Renette
+		* Permanent or temporary user
 		* Get user info (picture, code or other biometric stuffies).
 		* Send information to server.
-		* Wait for response and act on it. (Tienie)
+		* Wait for response and act on it. 
 		* Responses and actions written to activity log.
-
-	3. Logging out ?
-		* Get user info.
-		* Notify Server.
+		* Log if they are entering or exiting.....
+		
+	3. Regsiter temporary user...
+		* Sens temporary access code
 
 #Web server use cases
 	(split between client and lecturer)
-	1. Logging In (Staff)
+	1. Logging In (Staff) -- Tienie
 		* Get Information
 		* Authentication
-	2. Request appointment (for student)
+	3. Logging out --Tienie
+		
+	2. Request appointment (for student) --Elzahn
 		* Getting and sending information of "student" if not logged in.
-	3. Cancelling Appointements
+	3. Cancelling Appointements (either by student or staff member? Query prof enegelbrecht) --Elahn
 		* Both parties notified.
 		* Temporary access revoked.
-	4. Setting of availablility
+		
+	4. Setting of availablility -- Jason
 		* On which linked calander.
-	5. View Calander on client side.
-	6. Approve Appointment
+	6. Approve Appointment  -- Vivian
 		* Send notification
-		* Send temporary access code.
-	7. Download report.
-	8. Query Report.
+		* Send temporary access code. 
+		
+	7. Download report. - Szymon
+	8. Query Report. -- Szymon
 
 
 Meeting:
@@ -48,3 +52,20 @@ Notifications can be via sms, qrcodes etc (Think technological :D)
 Email Prof. Engelbrecht for his github username.
 
 
+Architectural Requriements
+-- Quality requirements -- Vivian
+--  integration and Access channels 
+    -- Access = Web (Tienie) & Pi's (Szymon)
+    -- Integration = LDAP, Calendar, Postgrad Meeting (Elzahn)
+    --- The two main componensts need to integrate with each other
+    
+
+-- Architecture Patterns = MVC
+-- Design patterns = Adapter (Jason)
+
+Technologies -- Renette
+-- Architecture frmework -- spring mvc
+
+
+
+Testing -- Jason
