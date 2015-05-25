@@ -42,6 +42,13 @@ Use Case Identification...
 	7. Download report. - Szymon
 	8. Query Report. -- Szymon
 
+	9. Information Portal
+		* Post information
+			* Authorised to post information(should this point be a point here?)
+			* Logged in to post(i think this point has to be above the other point, question still remains does that point have to be there?)
+		* Display information
+			* (No sub points :/)
+
 
 Meeting:
 Put server on departmental server on/behind dmc
