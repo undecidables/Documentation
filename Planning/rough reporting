@@ -1,0 +1,81 @@
+
+Use cases
+Reporting
+
+*getVisitorAccessExitTimes
+	priority - medium?? as in it must be done but its not important at the early stage of development
+
+	The getVisitorAccessExitTimes function allows a user to query the access and exit times of a specific visitor.
+
+	Parameters:
+		* VisitorId - specifies for which visitor to get the access and exit times.
+		* SpecificDay - Optional parameter, specifies which day to get the access and exit times of a visitor.
+		* FromDate and EndDate - Optional paramters, specifies which days to get the access and exit times of a visitor.
+
+	Pre-conditions:
+		* Visitor must exist.
+		* Date must be valid, the day must have occured. System can not tell the future yet!
+
+	Post-conditions
+		* You get your report!
+
+*getStaffAccessExitTimesReport
+	priority - medium?? as in it must be done but its not important at the early stage of development 
+
+	The getStaffAccessExitTimes function allows a privledged user(e.g: Head of Department) to query the access and exit times of a specific staff member.
+
+	Parameters:
+		* StaffId - specifies for which staff member to get the access and exit times.
+		* SpecificDay - Optional parameter, specifies which day to get the access and exit times of a staff member.
+		* FromDate and EndDate - Optional paramters, specifies which days to get the access and exit times of a staff member.
+
+	Pre-conditions:
+		* User must have the correct authorization to make use of this function.
+		* Date must be valid, the day must have occured. System can not tell the future yet!
+		* Staff member queried must exist.
+
+	Post-conditions
+		* You get your report!
+
+
+*getNotHonouredAppointmentsReport
+	priority - medium?? as in it must be done but its not important at the early stage of development
+
+	The getNotHonouredAppointments function provides the user with a means of querying a visitor's or staff member's not honoured appointments.
+
+	Parameters:
+		* StaffId or VisitorId - specifies for which staff member or visitor to get the not honoured appointments.
+
+	Pre-conditions:
+		* Visitor or Staff must exist.
+
+	Post-conditions
+		* You get your report!
+
+
+//I came up with these two. you guys agree with them?? 
+*generateCustomReports
+	priority - medium?? as in it must be done but its not important at the early stage of development
+
+	The generateCustomReports function allows the user to create a custom report based on a query provided by the user.
+
+	Paramters:
+		* Query string - 
+
+	 Post-conditions
+		* You get your report!
+
+*exportReportToSpecificFormat
+	priority - medium?? as in it must be done but its not important at the early stage of development
+
+	The exportReportToSpecificFormat function will allow the user to export a report to a specific format which will be specified by the user.
+
+	Parameters required:
+		* format - specifies the format to export the report to.
+		* report - specifies which report to export to the specific format.
+
+	Pre-conditions:
+		* The format specified by the user is supported by the system
+
+	Post-conditions
+		* You get your report! 
