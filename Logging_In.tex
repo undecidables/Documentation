@@ -1,0 +1,49 @@
+\newpage
+\subsection{Authentication}
+	The following section will describe functionality around logging staff members in and out.
+		\includegraphics[width=\linewidth]{Authentication/DataStructures.jpg}
+
+	\begin{description}
+
+	\item[Authenticate]\hfill \textit{Priority: Critical} \\
+		A user's details need to be authenticated with LDAP.\\
+		\textbf{Pre-conditions:} 
+			\begin{itemize}
+				\item A user must have an EMPLID from the University of Pretoria 
+				\item A user must have an associated password for their EMPLID from the University
+				\item A successful connection to LDAP is important
+				\item A user must be registered as a staff member on LDAP
+				\item A successful validation response after an LDAP authentication is needed to authenticate a user
+			\end{itemize}
+		\textbf{Post-conditions:} 
+			\begin{itemize}
+				\item A user is successfully authenticated on the server
+			\end{itemize}
+		
+	\item[Log In]\hfill \textit{Priority: Critical} \\
+		A user must be logged into the system once they have been authenticated. A user is logged in by 
+		creating a cookie containing the session ID. \\
+		\textbf{Pre-conditions:} 
+			\begin{itemize}
+				\item A user must have been successfully authenticated by the system to be logged in.
+			\end{itemize}
+		\textbf{Post-conditions:} 
+			\begin{itemize}
+				\item A user is successfully logged in and can thus access features which require authentication.
+				\item A user is taken to the booking management page on the website
+			\end{itemize}
+
+	\item[Log Out]\hfill \textit{Priority: Critical} \\
+		The system must be able to log a user out. A user is logged out by destroying the cookie containing their
+		session ID.\\
+		\textbf{Pre-conditions:} 
+			\begin{itemize}
+				\item A user must be logged in before they can be logged out
+			\end{itemize}
+		\textbf{Post-conditions:} 
+			\begin{itemize}
+			
+				\item A user's session cookie is destroyed and they are logged out on the system and taken back to the home page.
+				
+			\end{itemize}
+\end{description}
