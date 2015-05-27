@@ -1,0 +1,22 @@
+\subsubsection{Setting of availability}
+The following fucntionality of creating and setting will be available to only signed in users. Users who are not authorised or signed into the system will only be granted read-only privileges.
+
+\includegraphics[width=\linewidth]{Setting_Of_Availability.jpg}
+
+\begin{description}
+
+\item[Choose Calendar]\hfill \textit{Priority: Critical} \\
+An authorised user of the system should be able to select which calendar account to associate with the system. If the user chose a linked service, then that service needs to be authenticated.\\
+\textbf{Pre-conditions:} The user should be logged into the system and already have a calendar account from the linked services (Google \& Outlook). \\
+\textbf{Post-conditions:} Once the user has chosen the calendar to associate with the system, all updates in availability will be amended in that specific calendar.
+
+\item[View Availability]\hfill \textit{Priority: Critical} \\
+Both the authorised user and a non-authorised user (or guest) should be able to have a read-only functionality of viewing the availibility of the associated staff member on their calender.\\
+\textbf{Pre-conditions:} An associated calendar for the staff member should exist.\\
+\textbf{Post-conditions:} Be able to see whether the associated staff member has an appointment at a certain date and time or if they are free for appointments. 
+
+\item[Set Availability]\hfill \textit{Priority: Critical} \\
+The authorised user should be able to set whether s/he is available at a certain date or time or if they have an appointment at a specific date or time. This can be set by the staff member himself/herself or by the approval of an appointment.\\
+\textbf{Pre-conditions:} The user should be authorised and logged in and a calendar should exist.\\
+\textbf{Post-conditions:} The linked calendar should be updated with the particulars specified by the authorised user. (CRUD of appointments).
+\end{description}
