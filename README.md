@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/undecidables/Requirements-Documentation.png?label=ready&title=Ready)](https://waffle.io/undecidables/Requirements-Documentation)
 # Requirements-Documentation
 This repo contains the documentation regarding functional and non-functinal requirments of the project.
 
