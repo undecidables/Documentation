@@ -17,8 +17,8 @@ Use Case Identification...
 		* Responses and actions written to activity log.
 		* Log if they are entering or exiting.....
 		
-	3. Regsiter temporary user...
-		* Sens temporary access code
+	3. Register temporary user...
+		* Sends temporary access code
 
 #Web server use cases
 	(split between client and lecturer)
@@ -29,12 +29,12 @@ Use Case Identification...
 		
 	2. Request appointment (for student) --Elzahn
 		* Getting and sending information of "student" if not logged in.
-	3. Cancelling Appointements (either by student or staff member? Query prof enegelbrecht) --Elahn
+	3. Cancelling Appointments (either by student or staff member? Query prof Engelbrecht) --Elzahn
 		* Both parties notified.
 		* Temporary access revoked.
 		
-	4. Setting of availablility -- Jason
-		* On which linked calander.
+	4. Setting of availability -- Jason
+		* On which linked calender.
 	6. Approve Appointment  -- Vivian
 		* Send notification
 		* Send temporary access code. 
@@ -52,19 +52,19 @@ Use Case Identification...
 
 Meeting:
 Put server on departmental server on/behind dmc
-get quotes on everything not just cameras…. (Alll infrastructure!)
-Loggging - staff members are more important
-Calander - As many as possible :D (Google important and then outlook.) Good idea to keep a helpdesk calendar…
+get quotes on everything not just cameras…. (All infrastructure!)
+Logging - staff members are more important
+Calendar - As many as possible :D (Google important and then outlook.) Good idea to keep a helpdesk calendar…
 Notifications can be via sms, qrcodes etc (Think technological :D)
 Email Prof. Engelbrecht for his github username.
 
 
-Architectural Requriements
+Architectural Requirements
 -- Quality requirements -- Vivian
 --  integration and Access channels 
     -- Access = Web (Tienie) & Pi's (Szymon)
-    -- Integration = LDAP, Calendar, Postgrad Meeting (Elzahn)
-    --- The two main componensts need to integrate with each other
+    -- Integration = LDAP, Calendar, Postgraduate Meeting (Elzahn)
+    --- The two main components need to integrate with each other
     
 
 -- Architecture Patterns = MVC
