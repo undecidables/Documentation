@@ -1,0 +1,39 @@
+\subsection{Biometric Access}
+
+This module encapsulates functionality regarding validating biometric data or temporary access code to give staff members or visitors access to the Computer Science Department
+
+%\includegraphics[width=\linewidth]{Access/AcessUseCases}
+
+\subsubsection{Request Access}
+
+\begin{description}
+\item[Staff Access]\hfill \textit{Priority: Important} \\
+A staff member can gain access at a door using biometrics.
+
+\textbf{Pre-conditions:} 
+	\begin{itemize}
+		\item Staff member must be registered on system.
+		\item Biometric data must be validate correctly
+	\end{itemize}
+\textbf{Post-conditions:} 
+	\begin{itemize}
+		\item User gains access
+		\item Access logged (User, time, door, Entrance/Exit)
+	\end{itemize}
+\end{description}
+
+\begin{description}
+\item[Visitor Access]\hfill \textit{Priority: Important} \\
+A visitor can gain access to the department by using a temporary access code they received with  their booking confirmation.
+
+\textbf{Pre-conditions:} 
+	\begin{itemize}
+		\item Visitor needs to have an appointment
+		\item Temporary access code should be valid
+	\end{itemize}
+\textbf{Post-conditions:} 
+	\begin{itemize}
+		\item User gains access
+		\item Access logged (User, time, door, Entrance/Exit, appointment ID) 
+	\end{itemize}
+\end{description}
