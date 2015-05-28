@@ -1,1 +1,70 @@
 %information portal%
+
+\includegraphics[width=\linewidth]{InformationPortal/informationPortal_Scope}
+
+\subsection{createPost}
+\textit{Priority: Important}
+	The createPost function allows users of the system to easily create posts which will then be displayed to anyone that visits the Information Portal.
+	
+\subsubsection{Functional Requirement}
+\includegraphics[width=\linewidth]{InformationPortal/createPost_functionalRequirements}
+
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{InformationPortal/createPost_serviceContract}
+
+\subsubsection{Pre/Post Conditions}
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item User must be logged in.
+		\item User must have the correct authorization to make use of this function.
+	\end{itemize}
+	\textbf{Post-conditions:}
+	\begin{itemize}
+		\item Post will be created and persisted to the database.
+	\end{itemize}
+
+\subsection{getPosts}
+\textit{Priority: Important}
+
+The getPost function will retrieve posts from the database which will allow the user to view the posts made.
+
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{InformationPortal/getPosts_serviceContract}
+
+\subsection{deletePost}
+\textit{Priority: Important}
+
+The functionality provided by deletePost allows the user to remove posts from the Information Portal. User must have necessary permissions.
+
+
+
+\subsubsection{Pre/Post Conditions}
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item User must be logged in.
+		\item User must have the correct authorization to make use of this function.
+		\item Post must exist.
+	\end{itemize}
+	\textbf{Post-conditions:}
+	\begin{itemize}
+		\item Post will be hidden.
+	\end{itemize}
+
+\subsection{editPost}
+\textit{Priority: Important}
+
+The editPost provides functionality to the user that allows them to be able to make changes to posts already created.
+
+
+
+\subsubsection{Pre/Post Conditions}
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item User must be logged in.
+		\item User must have the correct authorization to make use of this function.
+		\item Post must exist.
+	\end{itemize}
+	\textbf{Post-conditions:}
+	\begin{itemize}
+		\item Post will be updated.
+	\end{itemize}
