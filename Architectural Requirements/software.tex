@@ -1,1 +1,41 @@
 \subsection{Software}
+
+\subsubsection{Build System}
+This project will use Gradle as a build System
+
+\subsubsection{Server}
+\textit{Programming Language:} Java \\
+\textit{Platform:} The server needs to be deployed on a Linux server.
+
+\textit{Frameworks and libraries:}
+\begin{itemize}
+	\item Spring
+		\begin{itemize}
+			\item Spring Framework (MVC, IoC, AOP)
+			\item Spring LDAP
+			\item Spring Data MongoDB
+			\item Spring Security
+		\end{itemize}
+	\item Thymeleaf template language for HTML and XML
+	\item OpenCV graphics processing library
+\end{itemize}
+
+\subsubsection{Database}
+We will use a MongoDB database for persistence.
+
+\subsubsection{Client}
+The client application will be developed in either Python or Java depending on the biometric devices' APIs. It will communicate with the server using http requests. Each http request's data will contain the client's door id, whether the user is entering or exiting and the types of biometric devices and the captured data. 
+
+The client application should run on Linux (Raspbian)
+
+\subsubsection{Web Access Channel}
+\begin{itemize}
+	\item HTML5
+	\item Javascript
+	\item JQuery
+	\item Ajax
+	\item Bootstrap
+\end{itemize}
+
+\subsubsection{Testing}
+We will use JUnit for unit testing.
