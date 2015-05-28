@@ -1,1 +1,42 @@
 \subsection{Hardware}
+Our client gave us the task of choosing the equipment we would need in order to build a fully working system that will be implemented at a later stage. Below is a list of equipment we would need for this project and their requirements.
+
+	\subsubsection{Server:}
+	xxxxx
+	
+	\subsubsection{Client:}
+	The client will be a device installed at the entrance and exit of the buildings where we would want to control access. The following requirements, listed below, must be met by the client in order to be compatible with the system.
+	\begin{itemize}
+		\item Capable of running a Linux based operating system.
+		\item Can connect to a network.
+	\end{itemize}
+	
+We will be using a Raspberry PI as the client. This device has a low power consumption, small form factor and is quite cheap. It also meets the requirements listed above.
+
+	\subsubsection{Camera:}
+	The camera will be used to capture the facial features of user's, which will be stored temporarily on the client. The client will then send this data to the server for authentication. The camera must satisfy the following requirements:
+	\begin{itemize}
+		\item Has a minimum horizontal resolution of 1920. %I said 1920 to be safe but once i get the calculations done will update%
+		\item Can connect to the client.
+		\item Is supported by the operating system on the client.
+	\end{itemize}
+	
+	\subsubsection{Fingerprint Scanner:}
+	Fingerprint scanners will allow us to capture a user's finger print which will then be authenticated on the server against a database. For the fingerprint scanner to be compatible with the system it is must meet the following requirements:
+	\begin{itemize}
+		\item Has a minimum resolution of 500 pixels per inch.
+		\item Can connect to the client.
+		\item Is supported by the operating system on the client.
+	\end{itemize}
+	
+We have 2 fingerprint scanners that meet the above requirements. They are the Futronic FS80 and FS88. The main difference between the two scanners is that the FS88 can detect fake fingers.
+	
+	\subsubsection{Keypad:}
+	Users will make use of the keypad by entering their unique key(password) which the client will send to a server for authentication. The following requirements must be met by the keypad:
+	\begin{itemize}
+		\item Can connect to the client.
+		\item Is supported by the operating system on the client.
+	\end{itemize}
+
+
+		
