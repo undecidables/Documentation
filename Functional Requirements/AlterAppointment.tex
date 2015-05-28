@@ -1,14 +1,10 @@
-\subsubsection{Alter Appointment}
+\subsection{Requesting Appointment}
+\textit{Priority: Important} \\
 
-This section will describe the functionality regarding  requesting and cancelling an appointment with a lecturer.
-
-\includegraphics[width=\linewidth]{AlterAppointment/alterAppointmentUseCase.jpg}
-
-\begin{description}
-
-\item[Requesting Appointment]\hfill \textit{Priority: Important} \\
+\subsubsection{Description}
 The requestAppointment function allows a user of the system to request an appointment with a staff member that is also making use of the system. \\
 
+\subsubsection{Pre/Post conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
 		\item Lecturer must exist.
@@ -20,23 +16,32 @@ The requestAppointment function allows a user of the system to request an appoin
 		\item User gets an appointment identifier back.
 		\item Lecturer is notified of the requested appointment. 
 	\end{itemize}
-\end{description}
 
-\begin{description}
 
-\item[Cancelling Appointment]\hfill \textit{Priority: Important} \\
-The cancelAppointment function allows the user to cancel an appointment if the user is either the staff member who's appointment it is or the user who made the appointment.  \\
 
+\subsection{Cancelling Appointment}
+\textit{Priority: Important} \\
+
+\subsubsection{Description}
+The cancelAppointment function allows the user to cancel an appointment if the user is either the staff member who's appointment it is or the user who made the appointment. \\
+
+\subsubsection{Pre/Post conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
 		\item The appointment must exist.
-		\item The user cancelling the appointment has to be the person that the appointment is with or the person who made the appointment.
+		\item The user cancelling the appointment has to be the person that the appointment is with or the person who made.
 	\end{itemize}
-\textbf{Post-conditions:}
+\textbf{Post-conditions:} 
 	\begin{itemize}
 		\item The appointment will be cancelled.
 		\item  Both parties are notified.
 		\item Access that was granted for the appointment is revoked. 
 	\end{itemize}
 
-\end{description}
+\subsection{Use Case diagram for Requesting Appointment and Cancelling Appointment}
+	\includegraphics[width=\linewidth]{AlterAppointment/alterAppointmentUseCase.jpg}
+\subsection{Functionality for Requesting Appointment and Cancelling Appointment}
+	\includegraphics[width=\linewidth]{AlterAppointment/alterAppointmentRequiredFunctionality.jpg}
+\subsection{Process Specification for Requesting Appointment and Cancelling Appointment}
+	\includegraphics[width=\linewidth]{AlterAppointment/alterAppointmentProcess.jpg}
+
