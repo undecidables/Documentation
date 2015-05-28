@@ -11,9 +11,13 @@
 %			\item FromDate and EndDate - Optional paramters, specifies which days to get the access and exit times of a visitor.
 %		\end{itemize}
 		
-
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{Reporting/getVisitorAccessExitTimesReport_serviceContract}
+\subsubsection{Pre/Post Conditions}
 	\textbf{Pre-conditions:}
 	\begin{itemize}
+		\item User must be logged in.
+		\item User must have the correct authorization to make use of this function.
 		\item Visitor must exist.
 		\item Date must be valid.
 	\end{itemize}
@@ -29,11 +33,15 @@
 %		\item SpecificDay - Optional parameter, specifies which day to get the access and exit times of a staff member.
 %		\item FromDate and EndDate - Optional paramters, specifies which days to get the access and exit times of a staff member.
 %	\end{itemize}
-		
+
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{Reporting/getStaffAccessExitTimesReport_serviceContract}
+\subsubsection{Pre/Post Conditions}		
 	\textbf{Pre-conditions:}
 	\begin{itemize}
+		\item User must be logged in.
 		\item User must have the correct authorization to make use of this function.
-		\item Date must be valid, the day must have occurred. System can not tell the future yet!
+		\item Date must be valid.
 		\item Staff member must exist.
 	\end{itemize}
 
@@ -47,8 +55,13 @@
 %		\item StaffId or VisitorId - specifies for which staff member or visitor to get the not honoured appointments.
 %	\end{itemize}
 		
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{Reporting/getNotHonouredAppointmentReports_serviceContract}
+\subsubsection{Pre/Post Conditions}
 	\textbf{Pre-conditions:}
 	\begin{itemize}
+		\item User must be logged in.
+		\item User must have the correct authorization to make use of this function.
 		\item Visitor or Staff must exist.
 	\end{itemize}
 
@@ -65,6 +78,12 @@
 %	\begin{itemize}
 %		\item Query string - 
 %	\end{itemize}
+\subsubsection{Pre/Post Conditions}
+	\begin{itemize}
+		\item User must be logged in.
+		\item User must have the correct authorization to make use of this function.
+		\item Query must be valid.
+	\end{itemize}
 
 
 \subsection{exportReportToSpecificFormat}
@@ -83,5 +102,6 @@
 
 	\textbf{Pre-conditions:}
 	\begin{itemize}
-		\item The format specified by the user is supported by the system
+		\item The format specified by the user is supported by the system.
+		\item User must be logged in.
 	\end{itemize}
