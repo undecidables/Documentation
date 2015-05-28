@@ -32,3 +32,30 @@ This module encapsulates functionality regarding validating biometric data or te
 	
 \subsubsection{Process Specification}
 	\includegraphics[width=\linewidth]{Access/RequestAccessActivity}	
+
+%Vivian
+\subsection{Register User}
+\textit{Priority: Critical} \\
+
+\subsubsection{Description}
+To register a user on the system is the same as to store biomteric data of the user on the database.
+Staff members needs to store their biomteric data to gain access to department/building. There will be an administrator(admin user) that will handle all the registering of users on the system.
+
+\subsubsection{Use Case diagram}
+\includegraphics[width=\linewidth]{}
+
+\subsubsection{Pre-/Post-Conditions}
+\textbf{Pre-conditions:} 
+	\begin{itemize}
+		\item Administrator (admin user) needs to be logged in to register a user.
+		\item The user being register should be authenticated using LDAP. 
+		\item The user being registered must be a staff member.
+	\end{itemize}
+\textbf{ Post-conditions:} 
+	\begin{itemize}
+		\item The staff member is registered on the system with his/hers own biometric data.
+		\item The staff member will be able to gain access to department/building.
+	\end{itemize}
+	
+\subsubsection{Process Specification}
+	\includegraphics[width=\linewidth]{}	
