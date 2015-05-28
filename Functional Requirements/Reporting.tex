@@ -1,0 +1,87 @@
+\includegraphics[width=\linewidth]{Reporting/Scope}
+\subsection{getVisitorAccessExitTimes}
+\textit{Priority: Important}
+
+	The getVisitorAccessExitTimes function allows a user to query the access and exit times of a specific visitor.
+
+%	\textbf{Parameters:}
+%		\begin{itemize}
+%			\item VisitorId - specifies for which visitor to get the access and exit times.
+%			\item SpecificDay - Optional parameter, specifies which day to get the access and exit times of a visitor.
+%			\item FromDate and EndDate - Optional paramters, specifies which days to get the access and exit times of a visitor.
+%		\end{itemize}
+		
+
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item Visitor must exist.
+		\item Date must be valid.
+	\end{itemize}
+
+\subsection{getStaffAccessExitTimesReport}
+\textit{Priority: Important}
+
+	The getStaffAccessExitTimes function allows a privileged user(e.g: Head of Department) to query the access and exit times of a specific staff member.
+
+%	\textbf{Parameters:}
+%	\begin{itemize}
+%		\item StaffId - specifies for which staff member to get the access and exit times.
+%		\item SpecificDay - Optional parameter, specifies which day to get the access and exit times of a staff member.
+%		\item FromDate and EndDate - Optional paramters, specifies which days to get the access and exit times of a staff member.
+%	\end{itemize}
+		
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item User must have the correct authorization to make use of this function.
+		\item Date must be valid, the day must have occurred. System can not tell the future yet!
+		\item Staff member must exist.
+	\end{itemize}
+
+\subsection{getNotHonouredAppointmentsReport}
+\textit{Priority: Important}
+
+	The getNotHonouredAppointments function provides the user with a means of querying a visitor's or staff member's not honoured appointments.
+
+%	\textbf{Parameters:}
+%	\begin{itemize}
+%		\item StaffId or VisitorId - specifies for which staff member or visitor to get the not honoured appointments.
+%	\end{itemize}
+		
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item Visitor or Staff must exist.
+	\end{itemize}
+
+%//I came up with these two. you guys agree with them?? 
+\subsection{generateCustomReports}
+\textit{Priority: Nice to have}
+
+	The generateCustomReports function allows the user to create a custom report based on a query provided by the user.
+
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{Reporting/generateCustomReport_serviceContract}
+
+%	\textbf{Paramters:}
+%	\begin{itemize}
+%		\item Query string - 
+%	\end{itemize}
+
+
+\subsection{exportReportToSpecificFormat}
+\textit{Priority: Important}
+
+	The exportReportToSpecificFormat function will allow the user to export a report to a specific format which will be specified by the user.
+
+%	\textbf{Parameters required:}
+%	\begin{itemize}
+%		\item Format - specifies the format to export the report to.
+%		\item Report - specifies which report to export to the specific format.
+%	\end{itemize}
+
+\subsubsection{Service Contract}
+\includegraphics[width=\linewidth]{Reporting/exportToSpecificFormat_serviceContract}
+
+	\textbf{Pre-conditions:}
+	\begin{itemize}
+		\item The format specified by the user is supported by the system
+	\end{itemize}
