@@ -1,13 +1,14 @@
-\subsubsection{Requesting Appointment}
+\subsubsection{Alter Appointment}
 
-This section will describe the functionality regarding  requesting an appointment with a lecturer.
+This section will describe the functionality regarding  requesting and cancelling an appointment with a lecturer.
 
-\includegraphics[width=\linewidth]{Request_Appointment.jpg}
+\includegraphics[width=\linewidth]{AlterAppointment/alterAppointmentUseCase.jpg}
 
 \begin{description}
 
 \item[Requesting Appointment]\hfill \textit{Priority: Important} \\
-The requestAppointment function allows a user of the system to request an appointment with a lecturer that is also making use of the system. \\
+The requestAppointment function allows a user of the system to request an appointment with a staff member that is also making use of the system. \\
+
 \textbf{Pre-conditions:} 
 	\begin{itemize}
 		\item Lecturer must exist.
@@ -21,16 +22,11 @@ The requestAppointment function allows a user of the system to request an appoin
 	\end{itemize}
 \end{description}
 
-\subsubsection{Cancelling Appointment}
-
-This section will describe the functionality regarding  cancelling an existing appointment with a lecturer.
-
-\includegraphics[width=\linewidth]{Cancel_Appointment.jpg}
-
 \begin{description}
 
 \item[Cancelling Appointment]\hfill \textit{Priority: Important} \\
-The cancelAppointment function allows you to cancel an appointment if you are either the lecturer who's appointment it is or the person who made the appointment.  \\
+The cancelAppointment function allows the user to cancel an appointment if the user is either the staff member who's appointment it is or the user who made the appointment.  \\
+
 \textbf{Pre-conditions:} 
 	\begin{itemize}
 		\item The appointment must exist.
@@ -42,6 +38,5 @@ The cancelAppointment function allows you to cancel an appointment if you are ei
 		\item  Both parties are notified.
 		\item Access that was granted for the appointment is revoked. 
 	\end{itemize}
-
 
 \end{description}
