@@ -1,33 +1,36 @@
 \subsection{Requesting Appointment}
 \textit{Priority: \textcolor{orange}{Important}} 
 
-\subsubsection{ Description}
-The requestAppointment function allows a user of the system to request an appointment with a staff member that is also making use of the system. 
+\subsubsection{Description}
+
+This functionality allows a user of the system to request an appointment with a staff member that is also using system. 
+
 
 \subsubsection{Pre/Post conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Lecturer must exist.
+		\item Staff member must exist.
 		\item Date and time of the requested appointment must be valid entries.
 	\end{itemize}
 \textbf{Post-conditions:} 
 	\begin{itemize}
-		\item Appointment will be saved for the lecturer to approve or deny later on.
-		\item User gets an appointment identifier back.
-		\item Lecturer is notified of the requested appointment. 
+		\item Appointment will be saved for the staff member to approve or disapprove later on.
+		\item User will receive an appointment identifier.
+		\item Staff member is notified of the requested appointment. 
 	\end{itemize}
 
 \subsection{Cancelling Appointment}
 \textit{Priority: \textcolor{orange}{Important}} 
 
 \subsubsection{Description}
-The cancelAppointment function allows the user to cancel an appointment if the user is either the staff member who's appointment it is or the user who made the appointment. 
+This function allows the user to cancel they have made, or in the case of a staff member, that has been made with them. The user who made the appointment will use the appointment identifier to cancel the booking. 
+
 
 \subsubsection{Pre/Post conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
 		\item The appointment must exist.
-		\item The user cancelling the appointment has to be the person that the appointment is with or the person who made.
+		\item The user cancelling the appointment has to be the person that the appointment is with or the person who made it.
 	\end{itemize}
 \textbf{Post-conditions:} 
 	\begin{itemize}
