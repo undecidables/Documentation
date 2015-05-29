@@ -1,5 +1,34 @@
 \subsubsection{Reliablity}
+One of the most important quality requirements fot the system is that it should be reliable.
+The system should therefore produce the correct action/output at any given time when the system is in use.\\
+\\The system should,
+\begin{itemize}
+	\item  never \textbf{give access} to someone whom should \textbf{not have access}.
+	\item  never \textbf{refuse access} to someone that\textbf{ have access}. 
+	\item  \textbf{never lock someone in}. If someone gain authorized access to the building the system should 				allow him/her to exit the building as well.
+\end{itemize}
 
 \subsubsection{Security}
+The system needs to be secure, since personal information is stored on the system. Security as a quality requirement means that the system should prevent malicious actions/attacks.\\
+\\The system should,
+\begin{itemize}
+	\item  protect the biometric data and other personal information of all users against unauthorized modification/access.
+	\item  protect the biometric data against third party applications.
+	\item  prevent loss of information (Personal information, Appointments etc.)
+\end{itemize}
 
-\subsubsection{Scalability}
+If security as a requirement is not met then the system can be deemed as unimplementable and worthless, since anyone can just gain access to the building.
+
+\subsubsection{Scalability And Generic}
+The system should scalable and generic.\\
+\\The scalability includes,
+\begin{itemize}
+	\item  \textbf{Functional scalability} - Which means to add functionality to the system with mininal effort from developer(s).
+		Althougth the system initially will only have facial recognition as a biometric method it should ideally be expanded to use 				any type of biometric method such as fingerprint scanning and voice recognition.
+	\item  The system needs to \textbf{scale out} (scale horizontally) - Which indicates that the system should be able to add more nodes,that 		is the system should add more biometric devices, replace existing ones and also add more entry points (entrances/doors), 			without the loss of performance or any other quality requirement.
+\end{itemize}
+
+
+
+
+
