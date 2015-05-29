@@ -1,9 +1,9 @@
 %Vivian
 \subsection{Approve Appointment}
-\textit{Priority: Important} \\
+\textit{Priority: \textcolor{orange}{Important}} 
 
 \subsubsection{Description}
-A person can book for an appointment with one of the staff members in the department/building. The particular staff member needs to approve such an appointment. A booking needs to be approved by a staff member before the guest/visitor can gain access to the department/building.
+A person can book for an appointment with one of the staff members in the department/building. The particular staff member needs to approve such an appointment. A booking needs to be approved first by a staff member before the guest/visitor can gain access to the department/building.
 
 \subsubsection{Use Case diagram}
 \includegraphics[width=\linewidth]{Appointments/ApproveAppointment}
@@ -11,21 +11,21 @@ A person can book for an appointment with one of the staff members in the depart
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Staff member needs to be logged in to approve his/her own appointments
-		\item There has to be an appointment booked before it can be approved.
+		\item Staff member needs to be logged in to approve his/her own appointments.
+		\item There should be a booking before an appointment can be approved.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item The staff member will by booked for that time period, that is the staff member will be unavailble during that time.
-		\item A notification with an temporary access code is sended to the user whom booked for the appointment
+		\item The staff member will be booked for that time period, therefor the staff member will be unavailble during that time.
+		\item An email notification with an temporary access code is sended to the user whom booked for the appointment.
 	\end{itemize}
 
 %Vivian
 \subsection{Disapprove Appointment}
-\textit{Priority: Important} \\
+\textit{Priority: \textcolor{orange}{Important}}
 
 \subsubsection{Description}
-An appointment can be disapproved by a staff member. The appointment appilication will be notified that the appointment has been disapproved. 
+An appointment can be disapproved by a staff member. The user who booked for the appointment will be notified that the appointment has been disapproved by the particular staff member. 
 
 \subsubsection{Use Case diagram}
 \includegraphics[width=\linewidth]{Appointments/DisapproveAppointment}
@@ -33,12 +33,12 @@ An appointment can be disapproved by a staff member. The appointment appilicatio
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Staff member needs to be logged in to disapprove his/her own appointments
-		\item There has to be an appointment booked before it can be disapproved.
+		\item Staff member needs to be logged in to disapprove his/her own appointments.
+		\item There should be a booking before an appointment can be disapproved.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item A notification informing the appointment applicant that the appointment has been disapproved.
+		\item An email notification informing the user whom made the booking that the appointment has been disapproved.
 	\end{itemize}	
 
 \subsection{Process Specification for Approve and Disapprove Appointment}
