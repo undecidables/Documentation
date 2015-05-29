@@ -1,4 +1,4 @@
-The following fucntionality of creating and setting availability will only be available to staff members. Users who are not authorised by the system will only be granted read-only privileges.
+The following functionality of creating and setting availability will only be available to staff members. Users who are not authorised by the system will be granted read-only privileges.
 \subsection{Use Case Diagram}
 \includegraphics[width=\linewidth]{Availability/Setting_Of_Availability1.jpg}
 
@@ -17,7 +17,7 @@ The following fucntionality of creating and setting availability will only be av
 \subsection{View Availability}
 \textit{Priority: \textcolor{orange}{Important}}
 	\subsubsection{Description}
-	Both the authorised user and a non-authorised user (or guest) should be able to have a read-only functionality of viewing the availibility of the associated staff member on their calender.\\
+	Both the authorised user and a non-authorised user (or guest) should be able to have a read-only functionality of viewing the availability of the associated staff member on their calender.\\
 	\subsubsection{Pre/Post conditions}
 		\textbf{Pre-conditions:} An associated calendar for the staff member should exist.\\
 		\textbf{Post-conditions:} Be able to see whether the associated staff member has an appointment at a certain date and time or if they are free for appointments. 
@@ -25,7 +25,11 @@ The following fucntionality of creating and setting availability will only be av
 \subsection{Set Availability}
 \textit{Priority: \textcolor{orange}{Important}}
 	\subsubsection{Description}
-	The authorised user should be able to set whether s/he is available at a certain date or time or if they have an appointment at a specific date or time. This can be set by the staff member himself/herself or by the approval of an appointment.\\
+	The authorised user should be able to set whether they are available at a certain date or time or if they have an appointment at a specific date or time. This can be set by the staff member himself/herself or by the approval of an appointment.\\
 	\subsubsection{Pre/Post conditions}
-		\textbf{Pre-conditions:} The user should be authorised and logged in and a calendar should exist.\\
+		\textbf{Pre-conditions:} 
+		\begin{itemize}
+			\item The user should be logged in.
+		 	\item A calendar should exist.
+		\end{itemize}
 		\textbf{Post-conditions:} The linked calendar should be updated with the particulars specified by the authorised user. (CRUD of appointments).
