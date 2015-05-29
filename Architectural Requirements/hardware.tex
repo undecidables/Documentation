@@ -2,7 +2,7 @@
 Our client gave us the task of choosing the equipment we would need in order to build a fully working system that will be implemented at a later stage. Below is a list of equipment we would need for this project and their requirements.
 
 	\subsubsection{Server}
-	xxxxx
+	The system will be deployed on an existing server owned by the Department of Computer Science.
 	
 	\subsubsection{Client}
 	The client will be a device installed at the entrance and exit of the buildings where we would want to control access. The following requirements, listed below, must be met by the client in order to be compatible with the system.
@@ -32,7 +32,9 @@ We will be using a Raspberry PI as the client. This device has a low power consu
 We have 2 fingerprint scanners that meet the above requirements. They are the Futronic FS80 and FS88. The main difference between the two scanners is that the FS88 can detect fake fingers.
 	
 	\subsubsection{Keypad}
-	Users will make use of the keypad by entering their unique key(password) which the client will send to a server for authentication. The following requirements must be met by the keypad:
+Visitors that do not have biometric access will use the keypad with the temporary access code they received when booking their appointments.
+
+Requirements:
 	\begin{itemize}
 		\item Can connect to the client.
 		\item Is supported by the operating system on the client.
