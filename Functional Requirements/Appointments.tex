@@ -7,7 +7,6 @@ A person can book for an appointment with one of the staff members in the depart
 
 \subsubsection{Use Case diagram}
 \includegraphics[width=\linewidth]{Appointments/ApproveAppointment}
-
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
@@ -16,8 +15,8 @@ A person can book for an appointment with one of the staff members in the depart
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item The staff member will be booked for that time period, therefor the staff member will be unavailble during that time.
-		\item An email notification with an temporary access code is sended to the user whom booked for the appointment.
+		\item The staff member will become unavailable during that time.
+		\item An email notification with an temporary access code is sent to the user who booked the appointment.
 	\end{itemize}
 
 %Vivian
@@ -25,13 +24,12 @@ A person can book for an appointment with one of the staff members in the depart
 \textit{Priority: \textcolor{orange}{Important}}
 
 \subsubsection{Description}
-An appointment can be disapproved by a staff member. The user who booked for the appointment will be notified that the appointment has been disapproved by the particular staff member. 
+An appointment can be disapproved by a staff member. The user who booked for the appointment will be notified that the appointment has been disapproved. 
 
 \subsubsection{Use Case diagram}
 \includegraphics[width=\linewidth]{Appointments/DisapproveAppointment}
 
-\subsubsection{Pre-/Post-Conditions}
-\textbf{Pre-conditions:} 
+\subsubsection{Pre-/Post-Conditions}\textbf{Pre-conditions:} 
 	\begin{itemize}
 		\item Staff member needs to be logged in to disapprove his/her own appointments.
 		\item There should be a booking before an appointment can be disapproved.
