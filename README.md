@@ -1,4 +1,4 @@
-# Requirements-Documentation
+# Documentation of The COSBAS System
 This repo contains the documentation regarding the COSBAS System.
 <br>
 This includes:
