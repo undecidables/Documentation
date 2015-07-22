@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper,titlepage]{article}
+
+\usepackage{pdflscape}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lscape}
+
+\graphicspath{ {./images/} }
+
+
+\usepackage{color}
+
+\definecolor{orange}{RGB}{255,130,0}
+\definecolor{myGreen}{RGB}{0,128,0}
+
+
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}
+}
+
+\begin{document}
+\title{\Huge COSBAS User Manual \\}
+\subtitle{ Git: \url{https://github.com/undecidables/Documentation} \\ GitHub Organisation: \url{https://github.com/undecidables}}
+\begin{figure}
+			\centering
+			\includegraphics[width=400px]{GroupLogo.png}
+\end{figure}
+\input{../team}   
+\date{\textbf{June 2015}}
+
+\maketitle
+
+\tableofcontents
+\pagebreak
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+%I strongly recomend using seperate tex files for each of the following sections and just include them here.
+
+	\section{Introduction}
+	Something like this is the user manual and we will describe the following....
+	%re-write and add more  
+	
+	\section{System Overview}
+	%\subsection{Vision} - we can split the system up and describe each section here using subsections
+	
+	\section{System Configuration}
+	%\input{SYS_CONFIG}
+	
+	\section{Installation of the COSBAS System}
+	%\input{InstallationProcess}
+		
+	\section{Getting Started}
+	%\input{GettingStartedGuide}
+	
+	\section{Using the System}
+	%This will be split up into sections again same as in the overview
+	%\input{}
+	
+	\section{Troubleshooting}
+	%\input{Troubleshooting}
+	
+\end{document}
