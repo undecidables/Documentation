@@ -5,9 +5,11 @@ This project will use the Gradle build system.
 
 \subsubsection{Server}
 \textit{Programming Language:} Java \\
-\textit{Platform:} The server-program needs to be deployed on a Linux server.
+\textit{Platform:} The server-program needs to be deployed on a Linux server.\\
+\textit{Application Server:} Jetty.\\
+\textit{Reasoning: } We chose a Jetty server over other application servers such as TomCat becasue the Jetty application server is much more third-party API friendly. Jetty is also much more focused on scalability and better performance with regards to serving static content than TomCat. Jetty's focus on multi-connection HTTP and features such as SPDY can significantly reduce page load latencies. The ultimate focus of Jetty is on speed, scalability and reliability, which is very important for our system.
 
-\textit{Frameworks and libraries:}
+\subsubsection{Frameworks and libraries:}
 \begin{itemize}
 	\item Spring
 		\begin{itemize}
