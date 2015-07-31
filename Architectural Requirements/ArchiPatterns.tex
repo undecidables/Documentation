@@ -17,3 +17,22 @@
 	\begin{itemize}
 		\item{Increased plugability of the system} - Because many different biometric access points as well as non-biometric access points will have to interact with the system. This makes it easy for a new type of access point to be added to the system.
 	\end{itemize}
+	
+\subsection{Strategy Design Pattern}
+	\subsubsection{Description}
+	The strategy design pattern abstracts the deep implementations of a concrete class, defining a family of algorithms that can be called during runtime. This makes it easier to call functions based on the way the user wants the pogram to react dynamically.
+	
+	
+	\subsubsection{Reason for use}
+	\begin{itemize}
+		\item{Increased plugability of the system} - We use this for the creation of a calendar service. The use of a strategy design pattern makes it easier to create and initialize an instance of a Calendar object by a chosen service such as Google or Microsoft Outlook.The initial implementation of the COSBAS system only focusses on the Google Calendar Service.
+	\end{itemize}
+	
+\subsection{Factory Method Design Pattern}
+	\subsubsection{Description}
+	By making use of the Factory Method design pattern we can create an object without exposing the creation logic to the client and refer to newly created objects using a common interface.
+	
+	\subsubsection{Reason for use}
+	\begin{itemize}
+		\item{Optimize code readability and enhance maintainability} - The easier code is read and abstracted from the actual implementation, the easier it is to modify or maintain the system to the changing needs of the client and the COSBAS system users. 
+	\end{itemize}
