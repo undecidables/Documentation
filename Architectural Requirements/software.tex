@@ -7,7 +7,7 @@ This project will use the Gradle build system.
 \textit{Programming Language:} Java \\
 \textit{Platform:} The server-program needs to be deployed on a Linux server.\\
 \textit{Application Server:} Jetty.\\
-\textit{Reasoning: } We chose a Jetty server over other application servers such as TomCat becasue the Jetty application server is much more third-party API friendly. Jetty is also much more focused on scalability and better performance with regards to serving static content than TomCat. Jetty's focus on multi-connection HTTP and features such as SPDY can significantly reduce page load latencies. The ultimate focus of Jetty is on speed, scalability and reliability, which is very important for our system.
+\textit{Reasoning: } We chose a Jetty server over other application servers such as TomCat because the Jetty application server is much more third-party API friendly. Jetty is also much more focused on scalability and better performance with regards to serving static content than TomCat. Jetty's focus on multi-connection HTTP and features such as SPDY can significantly reduce page load latencies. The ultimate focus of Jetty is on speed, scalability and reliability, which is very important for our system.
 
 \subsubsection{Frameworks and libraries:}
 \begin{itemize}
@@ -42,7 +42,13 @@ This project will use the Gradle build system.
 \end{itemize}
 
 \subsubsection{Database}
-We will use a MongoDB database for persistence. The main reason for this choice is that biometric data (pictures, sounds, etc.) needs to be stored.
+COSBAS will have a MongoDB database for persistence of the Biometric Data of the staff members as well as the appointment information of each staff member and the authentication keys that is generated for each appointment. \\
+\\
+The reasons for using MongoDB:
+	\begin{itemize}
+		\item The flexible data model allows us to persist our images and sounds that will be used as the biometric data to authenticate a staff member.
+		
+	\end{itemize}
 
 \subsubsection{Client}
 The client application will be developed in either Python or Java depending on the biometric devices' APIs. It will communicate with the server using http requests. Each http request's data will contain the client's door id, whether the user is entering or exiting and the types of biometric devices and the captured data. 
