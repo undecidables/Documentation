@@ -1,0 +1,76 @@
+\subsection{Getting Access to the System}
+To gain access to the COSBAS System through the web client you need the following:
+	\begin{itemize}
+		\item{\textbf{Username} - This username is the same as the username needed to login to the CS Website. 
+					   Usually it is the employee number of the staff member} 
+		\item{\textbf{Password} - This is the password that you use to login to the CS Website.}
+	\end{itemize}
+
+\subsection{Register on the System}
+If you need to register on the system you need to go to the department where they will add you to their LDAP servers such that you can login to the system. \\
+\\
+\textbf{Note:} Only staff members or frequent recognised members will be able to get access to the system by means of the CS username and password. If you are not such a member then you can view the web client as an guest and still make appointments as you wish.
+
+\subsection{Change of Login Details}
+The COSBAS System will not be able to change your username or password. To change your CS login details, which is your COSBAS login details, you need to go to the department since the COSBAS System authenticates the user through LDAP.
+
+\subsection{General Walkthrough of the System}
+\subsubsection{COSBAS-Client}
+As mentioned previously the client consists of the hardware, which is the camera, fingerprint scanner, raspberry pi, keypad and pressure pad. The client will do the biometric detection on the Raspberry Pi and will send the neccesary data to the server for the biometric autentication.\\
+\\
+Walkthrough per Biometric/Authentication Method,
+\begin{itemize}
+		\item{\textbf{Facial Recognition } - Stand on the pressure pad to initialize the camera to take a photo. After an photo has been taken facial detection will occur in the Raspberry Pi to detect if there is in fact a face in the image. The image is sended to the server for authentication where the user can gain access to the department if successful authentication has been the case.} 
+		\item{\textbf{Fingerprint Scanning} - Place a finger on the fingerprint scanner. \\
+			Either one of the following fingers may be used, 
+				\subitem{- Left Thumb}
+				\subitem{- Left Index Finger}
+				\subitem{- Right Thumb}
+				\subitem{- Right Index Finger}
+
+			The fingerprint scan will be authenticated against current stored copies of the user's fingerprints. The user will gain access if the authentication has been successfull.
+			}
+
+	\item{\textbf{Authentication Key} - Enter the authentication key on the keypad. 
+		\subitem{- For \textbf{ registered users} such as the staff members this will be the dedicated \\ authentication key you will be provided with once registration for the COSBAS System has been done.}
+
+		\subitem{- For \textbf{temporary/guest users} this will be the key that was provided after the appointment has been approved by the particular staff member through the email that the guest user should've received.}
+
+		}
+	\end{itemize}
+
+\subsubsection{Web-Client}
+	\begin{itemize}
+		\item{\textbf{Registered User}} 
+			\begin{itemize}
+				\item{Login with your COSBAS Login Details (see section 5.1)} 
+				\item{If you have a gmail account and would like to link your Google Calendar to the appointment system, grant permission to Google to get access to your Calendar (You will be redirected to the grant access page of Google).}
+				\item{Go to the appointment page to approve or decline appointments.}
+				\item{Go to the booking page to make a booking by using the online form.}
+			\end{itemize}
+
+		\item{\textbf{Guest User} }
+			\begin{itemize}
+				\item{No login will be needed.}
+				\item{Go to the view calendar page to view the calendar of a specific staff member.}
+				\item{Go to the booking page to make a booking by using the online form.}
+			\end{itemize}
+
+		\item{\textbf{Admin User} }
+			\begin{itemize}
+				\item{Login with your COSBAS Login Details (see section 5.1)} 
+				\item{Go to the appointment page to approve or decline appointments.}
+				\item{Go to the booking page to make a booking by using the online form.}
+				\item{Go to the registration page to upload the biomteric data of a specific staff member, that is to register the user on the COSBAS System.\\
+\textbf{Note:} When registering a user that user will need to provide his/her login details (CS Login Details) before registration can be done.}
+			\end{itemize}
+	\end{itemize}
+
+\subsection{Exit the System}
+To exit the system depends on the type of user you are,
+	\begin{itemize}
+		\item{if you are a \textbf{registered/admin user} you can simply click on the logout button to exit the system.} 
+		\item{if you are a \textbf{guest user} you can exit the system by simply closing the browser.}
+	\end{itemize}
+
+
