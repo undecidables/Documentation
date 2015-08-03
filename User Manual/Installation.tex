@@ -1,7 +1,11 @@
 The Computer Science Biometric Access System (COSBAS) consists of two main components: The access and appointment server and the access client.
 
+Due to the nature of the system the average user who just wants to use the appointment or access system that is already in place can ignore this section.
+
+The appointment system can be accessed through a normal web browser and gaining access after you have been registered on the system should be as simple as standing in front of the door and entering an access code or activating the biometric devices.
+
 \subsection{Obtaining the software}
-The software's Java source code as  well as all related documentation can be found on the Undecidables GitHub organisation at \url{https://github.com/undecidables}
+The system's Java source code as  well as all related documentation can be found on the Undecidables GitHub organisation at \url{https://github.com/undecidables}
 
 The important repositories in this organisation:
 \begin{itemize}
@@ -23,13 +27,25 @@ The following two repositories are less important to the end user, but might giv
 
 
 \subsection{Installing the server component}   
+
+\subsubsection{Configuration}
+	Common system properties such as the server port, the ldap address and the mongoDB address can be set in the application.properties file located in 'src/main/resources'. The so-called 'secret' file needed to use the Google Calendar API should also be placed in this location.
+	
+\subsubsection{Building}
 We use the Gradle build system to manage dependencies:
 	\begin{itemize}
-	
 		\item On a system that has Gradle 2.3 installed simply run 'gradle build'  to created an executable jar and use 'gradle run' to execute it.
 		\item On a system that does not have at least Gradle 2.3 installed, the gradle wrapper (that is on the repository) can be used. Simply use 'gradlew' instead of 'gradle' when you are in the projects root directory. (On a linux system maybe './gradlew'). This wrapper will then download the correct version of Gradle and use it to build the project.
 		\item gradle and gradlew might require super user or administrator privileges.
-	
 	\end{itemize}
-	
-	Common system properties such as the server port, the ldap address and the mongoDB address can be set in the application.properties file located in 'src/main/resources'. The so-called 'secret' file needed to use the Google Calendar API should also be placed in this location.
+
+\subsection{Installing the client component} 
+The client component should ideally be deployed on a small computer like a raspberry pi located at a door or some other access channel. The hardware configuration for the client was discussed previously in this document.
+
+\subsubsection{Configuration}
+Similiarly to the structure used in the Server component common application properties (eg. the door it is located at and the server's address) can be set in the config.properties file located in src/main/resources
+
+\subsubsection{Building}
+The client also uses the Gradle build system so it can be built and executed in the same way as the server.
+
+Due to the minimal resources of the Raspberry Pi's and to save some time it is recommended that the client is built and set up on one Pi and then cloned to the others. Small configuration changes can be made to each Pi at a later stage.
