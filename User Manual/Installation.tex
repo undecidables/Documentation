@@ -1,1 +1,35 @@
-   
+The Computer Science Biometric Access System (COSBAS) consists of two main components: The access and appointment server and the access client.
+
+\subsection{Obtaining the software}
+The software's Java source code as  well as all related documentation can be found on the Undecidables GitHub organisation at \url{https://github.com/undecidables}
+
+The important repositories in this organisation:
+\begin{itemize}
+
+	\item \textbf{Documentation} The documentation repository is home to the project's Wiki and also contains the Functional requirements, architechtural requirements and User Manual.
+	
+	\item \textbf{COSBAS-Server} This repository contains the server component of the project. It consists of Java sourcecode, Thymeleaf view templates, a Gradle build file and  a few configuration files.
+
+	\item \textbf{COSBAS-Client} This program is the client application to request access through the biometric system. It is also written in Java and uses the Gradle build system.
+
+\end{itemize}
+
+The following two repositories are less important to the end user, but might give some insight into the beginning of the system's development:
+\begin{itemize}
+	\item \textbf{Research} This repository was created as a central location for the reasearch conducted at the beginning of the project, especially reasearch about hardware, technologies and frameworks.
+	\item \textbf{Tenders} This repository contains the tender documents the team created for the original COS301 project proposals. It is not important to a user of the COSBAS system.
+
+\end{itemize}
+
+
+\subsection{Installing the server component}   
+We use the Gradle build system to manage dependencies:
+	\begin{itemize}
+	
+		\item On a system that has Gradle 2.3 installed simply run 'gradle build'  to created an executable jar and use 'gradle run' to execute it.
+		\item On a system that does not have at least Gradle 2.3 installed, the gradle wrapper (that is on the repository) can be used. Simply use 'gradlew' instead of 'gradle' when you are in the projects root directory. (On a linux system maybe './gradlew'). This wrapper will then download the correct version of Gradle and use it to build the project.
+		\item gradle and gradlew might require super user or administrator privileges.
+	
+	\end{itemize}
+	
+	Common system properties such as the server port, the ldap address and the mongoDB address can be set in the application.properties file located in 'src/main/resources'. The so-called 'secret' file needed to use the Google Calendar API should also be placed in this location.
