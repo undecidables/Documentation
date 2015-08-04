@@ -1,23 +1,23 @@
-\subsection{Graphical System Configuration diagram}
+\subsection{Graphical System Configuration Diagram}
 
 \includegraphics[width=\linewidth]{System_Config.png}
 
-\subsection{Description of the equipment used as illustrated on the diagram}
+\subsection{Description of the Equipment used as Illustrated on the Diagram}
 \begin{itemize}
-\item Client - Raspberry PI: Is a very small computer with a very low power consumption. The PI can handle quite a few input/ouput devices via the USB/HDMI/LAN/GPIO ports
-\item Camera: A device which will capture an image of the user that will want to authenicate via biometrics.
-\item Fingerprint scanner: A device that will caputer the finger print of the user which will be used for authentication.
-\item Keypad: Will be used by users that will gain access to the building via the keycode.
-\item USB Hub: This device will allow us to connect more than one device via USB to the client as well as give power to the client.
-\item Pressure mat: This device will allow us to pick up that the user is ready to be authenticated to gain access to the building.
-\item Electromagnet door lock: Will keep the door locked until the client has succesfully authenticated the user.
-\item Server: Will be used for all the heavy computations such as facial/finger print recognition, etc.
+\item \textbf{Client - Raspberry PI:} Is a very small computer with a very low power consumption. The PI can handle quite a few input/ouput devices via the USB/HDMI/LAN/GPIO ports.
+\item \textbf{Camera:} A device which will capture an image of the user that will want to authenicate via biometrics.
+\item \textbf{Fingerprint scanner:} A device that will capture the fingerprint of the user which will be used for authentication.
+\item \textbf{Keypad:} Will be used by users that will gain access to the building via the keycode.
+\item \textbf{USB Hub:} This device will allow the system to connect more than one device via USB to the client as well as give power to the client.
+\item \textbf{Pressure mat:} This device will allow the system to pick up that the user is ready to be authenticated (usually facial recognition) to gain access to the building.
+\item \textbf{Electromagnet door lock:} Will keep the door locked until the client has succesfully authenticated the user.
+\item \textbf{ Server:} Will be used for all the heavy computations such as facial/finger print recognition, etc.
 \end{itemize}
 
 \subsection{System Configuration Explained}
 The system is made up of pluggable authentication devices such as a keypad, camera and fingerprint scanner, as well a client (Raspberry Pi) and a server. The entire authentication process is started a soon as the user steps onto the pressure mat sending the authentication data to the Raspberry Pi for processing before it is sent to the server for authentication. Once authentication is complete on the server, a reply will be sent to the client and the client will act accordingly.
 
-\subsection{Communication and networking}
+\subsection{Communication and Networking}
 The pressure mat, USB Hub and electromagnet door lock all get their power from the main outlet while the keypad, camera and fingerprint scanner will be getting their power via the USB connection. The Raspberry Pi also connects to the USB Hub both for power and data transfer between the authentication devices and the client. The client communicates with the server via a LAN cable and the pressure mat and electromagnet door lock connects to the client GPIO pins via I/O cables. 
 
 Once the user steps onto the pressure mat a signal is sent to the client which gets its data from the authentication devices and processes that data before sending it off to the server if it was valid data. The server the authenticates the person and sends the data back to the client that will then, if the authentication was successful, open the door for the user.

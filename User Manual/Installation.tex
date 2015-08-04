@@ -1,35 +1,39 @@
-The Computer Science Biometric Access System (COSBAS) consists of two main components: The access and appointment server and the access client.
+The COSBAS System consists of two main components:
+	\begin{itemize}
+		\item{The access and appointment server}
+		\item{The access client}
+	\end{itemize}
 
 Due to the nature of the system the average user who just wants to use the appointment or access system that is already in place can ignore this section.
 
 The appointment system can be accessed through a normal web browser and gaining access after you have been registered on the system should be as simple as standing in front of the door and entering an access code or activating the biometric devices.
 
-\subsection{Obtaining the software}
+\subsection{Obtaining the Software}
 The system's Java source code as  well as all related documentation can be found on the Undecidables GitHub organisation at \url{https://github.com/undecidables}
 
 The important repositories in this organisation:
 \begin{itemize}
 
-	\item \textbf{Documentation} The documentation repository is home to the project's Wiki and also contains the Functional requirements, architechtural requirements and User Manual.
+	\item \textbf{Documentation:} The documentation repository is home to the project's Wiki and also contains the Functional Requirements, Architectural Requirements and User Manual.
 	
-	\item \textbf{COSBAS-Server} This repository contains the server component of the project. It consists of Java sourcecode, Thymeleaf view templates, a Gradle build file and  a few configuration files.
+	\item \textbf{COSBAS-Server:} This repository contains the server component of the project. It consists of Java sourcecode, Thymeleaf view templates, a Gradle build file and  a few configuration files.
 
-	\item \textbf{COSBAS-Client} This program is the client application to request access through the biometric system. It is also written in Java and uses the Gradle build system.
+	\item \textbf{COSBAS-Client:} This program is the client application to request access through the biometric system. It is also written in Java and uses the Gradle build system.
 
 \end{itemize}
 
 The following two repositories are less important to the end user, but might give some insight into the beginning of the system's development:
 \begin{itemize}
-	\item \textbf{Research} This repository was created as a central location for the reasearch conducted at the beginning of the project, especially reasearch about hardware, technologies and frameworks.
-	\item \textbf{Tenders} This repository contains the tender documents the team created for the original COS301 project proposals. It is not important to a user of the COSBAS system.
+	\item \textbf{Research:} This repository was created as a central location for the reasearch conducted at the beginning of the project, especially reasearch about hardware, technologies and frameworks.
+	\item \textbf{Tenders:} This repository contains the tender documents the team created for the original COS301 project proposals. It is not important to a user of the COSBAS system.
 
 \end{itemize}
 
 
-\subsection{Installing the server component}   
+\subsection{Installing the Server Component}   
 
 \subsubsection{Configuration}
-	Common system properties such as the server port, the ldap address and the mongoDB address can be set in the application.properties file located in 'src/main/resources'. The so-called 'secret' file needed to use the Google Calendar API should also be placed in this location.
+	Common system properties such as the server port, the LDAP address and the mongoDB address can be set in the application.properties file located in 'src/main/resources'. The so-called 'secret' file needed to use the Google Calendar API should also be placed in this location.
 	
 \subsubsection{Building}
 We use the Gradle build system to manage dependencies:
@@ -39,13 +43,13 @@ We use the Gradle build system to manage dependencies:
 		\item gradle and gradlew might require super user or administrator privileges.
 	\end{itemize}
 
-\subsection{Installing the client component} 
-The client component should ideally be deployed on a small computer like a raspberry pi located at a door or some other access channel. The hardware configuration for the client was discussed previously in this document.
+\subsection{Installing the Client Component} 
+The client component should ideally be deployed on a small computer like a Raspberry Pi located at a door or some other access channel. The hardware configuration for the client was discussed in section 3 in this document.
 
 \subsubsection{Configuration}
-Similiarly to the structure used in the Server component common application properties (eg. the door it is located at and the server's address) can be set in the config.properties file located in src/main/resources
+Similarly to the structure used in the server component common application properties (eg. where the door it is located at and the server's address) can be set in the config.properties file located in src/main/resources.
 
 \subsubsection{Building}
-The client also uses the Gradle build system so it can be built and executed in the same way as the server.
+The client also uses the Gradle build system so it can be built and executed in the same way as the server (see section 4.2.2).
 
 Due to the minimal resources of the Raspberry Pi's and to save some time it is recommended that the client is built and set up on one Pi and then cloned to the others. Small configuration changes can be made to each Pi at a later stage.
