@@ -21,3 +21,22 @@ The system is made up of pluggable authentication devices such as a keypad, came
 The pressure mat, USB Hub and electromagnet door lock all get their power from the main outlet while the keypad, camera and fingerprint scanner will be getting their power via the USB connection. The Raspberry Pi also connects to the USB Hub both for power and data transfer between the authentication devices and the client. The client communicates with the server via a LAN cable and the pressure mat and electromagnet door lock connects to the client GPIO pins via I/O cables. 
 
 Once the user steps onto the pressure mat a signal is sent to the client which gets its data from the authentication devices and processes that data before sending it off to the server if it was valid data. The server the authenticates the person and sends the data back to the client that will then, if the authentication was successful, open the door for the user.
+
+\subsection{New Biometric Types}
+
+\subsubsection{Server Side}
+Adding a new biometric validator to the system requires source code modification. 
+\begin{enumerate}
+	\item \textbf{Write the validator} \\
+	Each validator should extend the abstract \verb!AccessValidator! class in the \verb!cosbas.biometric.validators! package.
+	\item \textbf{Define it as a bean} \\ 
+	Declare the class a bean by adding the Spring  \verb!@Component! annotation to it.
+	\item \textbf{Register it on the system} \\
+	To register the biometric type on the system add it to the \verb!cosbas.biometric.biometricTypes! enum with its validator class. Eg. 
+	\verb!CODE (CodeValidator.class)!. The type should be uppercase.
+	
+\end{enumerate}
+
+
+\subsubsection{Client Side}
+To be documented.
