@@ -1,42 +1,42 @@
-\subsection{Requesting Appointment}
+\subsection{Requesting Appointment/Making a booking}
 \textit{Priority: \textcolor{orange}{Important}} 
 
 \subsubsection{Description}
 
-This functionality allows a user of the system to request an appointment with a staff member that is also using system. 
+This functionality allows a user(s) of the system to request an appointment (book an appointment) with a staff member that is also using system. 
 
 
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Staff member must exist.
-		\item Date and time of the requested appointment must be valid entries.
+		\item Staff member must exist on the system.
+		\item Date and time of the requested appointment must be valid entries, that is the staff member must be available at that time.
 	\end{itemize}
 \textbf{Post-conditions:} 
 	\begin{itemize}
-		\item Appointment will be saved for the staff member to approve or disapprove later on.
-		\item User will receive an appointment identifier.
-		\item Staff member is notified of the requested appointment. 
+		\item The appointment will be saved for the staff member to approve or disapprove later on.
+		\item The user(s) will receive an appointment identifier.
+		\item The staff member is notified of the requested appointment. 
 	\end{itemize}
 
 \subsection{Cancelling Appointment}
 \textit{Priority: \textcolor{orange}{Important}} 
 
 \subsubsection{Description}
-This function allows the user to cancel an appointment they have made, or in the case of a staff member, that has been made with them. The user who made the appointment will use the appointment identifier to cancel the booking. 
+This function allows the user to cancel an appointment they have made, or in the case of a staff member, that has been made with them. The user who made the booking will make use of the link in the first email, that is the email that informed the user that the appointment has been approved, to cancel the appointment. 
 
 
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item The appointment must exist.
-		\item The user cancelling the appointment has to be the person that the appointment is with or the person who made it.
+		\item The appointment must exist on the system.
+		\item The user cancelling the appointment has to be the staff member that the appointment is with or the user who made the booking.
 	\end{itemize}
 \textbf{Post-conditions:} 
 	\begin{itemize}
-		\item The appointment will be cancelled.
-		\item  Both parties are notified.
-		\item Access that was granted for the appointment is revoked. 
+		\item The appointment will be cancelled, that is removed from the system/database.
+		\item  Both parties are notified via email.
+		\item Access that was granted for the appointment is revoked, that is the temporary access key will be revoked. 
 	\end{itemize}
 
 \subsection{Use Case diagram for Requesting Appointment and Cancelling Appointment}

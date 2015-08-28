@@ -3,20 +3,20 @@
 \textit{Priority: \textcolor{orange}{Important}} 
 
 \subsubsection{Description}
-A person can book for an appointment with one of the staff members in the department/building. The particular staff member needs to approve such an appointment. A booking needs to be approved first by a staff member before the guest/visitor can gain access to the department/building.
+A person can make a booking with one of the staff members in the department/building. The particular staff member needs to approve such an appointment. A booking needs to be approved first by a staff member before the guest/visitor can gain access to the department/building.
 
 \subsubsection{Use Case diagram}
 \includegraphics[width=\linewidth]{Appointments/ApproveAppointment}
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Staff member needs to be logged in to approve his/her own appointments.
+		\item Staff member needs to be logged into the COSBAS System to approve his/her own appointments.
 		\item There should be a booking before an appointment can be approved.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item The staff member will become unavailable during that time.
-		\item An email notification with an temporary access code is sent to the user who booked the appointment.
+		\item The staff member will become unavailable during that time, which will be updated on the staff member's corresponding calendar.
+		\item An email notification with a temporary access code is send to the user(s) who made the booking.
 	\end{itemize}
 
 %Vivian
@@ -24,19 +24,19 @@ A person can book for an appointment with one of the staff members in the depart
 \textit{Priority: \textcolor{orange}{Important}}
 
 \subsubsection{Description}
-An appointment can be disapproved by a staff member. The user who booked for the appointment will be notified that the appointment has been disapproved. 
+A booking can be disapproved by a staff member. The user who made the booking will be notified that the appointment has been disapproved. 
 
 \subsubsection{Use Case diagram}
 \includegraphics[width=\linewidth]{Appointments/DisapproveAppointment}
 
 \subsubsection{Pre-/Post-Conditions}\textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Staff member needs to be logged in to disapprove his/her own appointments.
+		\item Staff member needs to be logged into the COSBAS System to disapprove his/her own appointments.
 		\item There should be a booking before an appointment can be disapproved.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item An email notification informing the user who made the booking that the appointment has been disapproved.
+		\item An email notification informing the user(s), who made the booking, that the appointment has been disapproved.
 	\end{itemize}	
 
 \subsection{Process Specification for Approve and Disapprove Appointment}

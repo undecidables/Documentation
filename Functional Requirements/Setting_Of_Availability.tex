@@ -5,31 +5,46 @@ The following functionality of creating and setting availability will only be av
 \subsection{Module Functionality}
 \includegraphics[width=\linewidth]{Availability/Setting_Of_Availability.jpg}
 
-
 \subsection{Choose Calendar}
 \textit{Priority: \textcolor{orange}{Important}}
 	\subsubsection{Description}
-	An authorised user of the system should be able to select which calendar account to associate with the system. If the user chose a linked service, then that service needs to be authenticated.\\
+	An authorised user of the system should be able to select which calendar account to associate with the system. If the user chose a linked service, then that service needs to be authenticated.
 	\subsubsection{Pre-/Post-Conditions}
-		\textbf{Pre-conditions:} The user should be logged into the system and already have a calendar account from the linked services (Google \& Outlook). \\
-		\textbf{Post-conditions:} Once the user has chosen the calendar to associate with the system, all updates in availability will be amended in that specific calendar.
+		\textbf{Pre-conditions:} 
+			\begin{itemize}
+				\item The user should be logged into the system 
+				\item The user should already have a calendar account from the linked services (Google \& Outlook).
+			\end{itemize}
+		\textbf{Post-conditions:} 
+			\begin{itemize}
+				\item Once the user has chosen the calendar to associate with the system, all updates in availability will be amended in that specific calendar.
+			\end{itemize}
 
 \subsection{View Availability}
 \textit{Priority: \textcolor{orange}{Important}}
 	\subsubsection{Description}
-	Both the authorised user and a non-authorised user (or guest) should be able to have a read-only functionality of viewing the availability of the associated staff member on their calender.\\
+	Both the authorised user and a non-authorised user (or guest) should be able to have a read-only functionality of viewing the availability of the associated staff member on their calender.
 	\subsubsection{Pre-/Post-Conditions}
-		\textbf{Pre-conditions:} An associated calendar for the staff member should exist.\\
-		\textbf{Post-conditions:} Be able to see whether the associated staff member has an appointment at a certain date and time or if they are free for appointments. 
+		\textbf{Pre-conditions:} 
+			\begin{itemize}
+				\item An associated calendar for the staff member should exist on the system. 
+			\end{itemize}
+		\textbf{Post-conditions:} 
+			\begin{itemize}
+				\item Be able to see whether the associated staff member has an appointment at a certain date and time or if they are free for appointments. 
+			\end{itemize}
 	
 \subsection{Set Availability}
 \textit{Priority: \textcolor{orange}{Important}}
 	\subsubsection{Description}
-	The authorised user should be able to set whether they are available at a certain date or time or if they have an appointment at a specific date or time. This can be set by the staff member himself/herself or by the approval of an appointment.\\
+	The staff member should be able to set whether they are available at a certain date or time or if they have an appointment at a specific date or time. This can be set by the staff member himself/herself or by the approval of an appointment.
 	\subsubsection{Pre-/Post-Conditions}
 		\textbf{Pre-conditions:} 
 		\begin{itemize}
-			\item The user should be logged in.
+			\item The user should be logged into the system.
 		 	\item A calendar should exist.
 		\end{itemize}
-		\textbf{Post-conditions:} The linked calendar should be updated with the particulars specified by the authorised user. (CRUD of appointments).
+		\textbf{Post-conditions:} 
+			\begin{itemize}
+				\item The linked calendar should be updated with the particulars specified by the authorised user. (CRUD of appointments).
+			\end{itemize}
