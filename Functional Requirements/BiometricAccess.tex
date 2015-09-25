@@ -16,6 +16,7 @@ This module encapsulates functionality regarding validating biometric data or te
 \textbf{Staff Access Pre-conditions:} 
 	\begin{itemize}
 		\item Staff member must be registered on the system.
+		\item Staff member must stand correctly on the pressure mat for authentication to be activated. 
 		\item Biometric data must validate correctly.
 	\end{itemize}
 \textbf{Visitor Access Pre-conditions:} 
@@ -37,7 +38,7 @@ This module encapsulates functionality regarding validating biometric data or te
 \textit{Priority: \textcolor{red}{Critical}} 
 
 \subsubsection{Description}
-To register a user on the system is the same as to store biomteric data of the user on the database.
+To register a user on the system is the same as to store biomteric data of the user in the database.
 Staff members needs to store their biomteric data to gain access to department/building. There will be an administrator (admin user) that will handle all the registration of users on the system.
 
 \subsubsection{Use Case diagram}
@@ -46,12 +47,14 @@ Staff members needs to store their biomteric data to gain access to department/b
 \subsubsection{Pre-/Post-Conditions}
 \textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Administrator (admin user) needs to be logged in to register a user.
+		\item Administrator (admin user) needs to be logged into the registration application to register a user.
 		\item The user being registered should be authenticated by means of LDAP. 
 		\item The user being registered must be a staff member.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item The staff member is registered on the system with his/hers own biometric data.
-		\item The staff member will be able to gain access to department/building by means of the biometric device.
+		\item The biometric data will be stored in a temporary collection on the database for authentication by another Admin User (not the same the admin user as the one whom made the registration).
+		\item After the other admin user approved the registrations for that particular day each staff member, 
+			\subitem-is registered on the system with his/hers own biometric data.
+			\subitem-will be able to gain access to department/building by means of the biometric device.
 	\end{itemize}
