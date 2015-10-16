@@ -43,20 +43,35 @@
 					\item Has CDI support for the Mongo Repositories that enables the system to have custom query functions.
 				\end{itemize}
 			\item Spring Security
+				\begin{itemize}
+					\item Handles the login to LDAP
+					\item Does session handling for our system automatically
+					\item Easy web access control
+				\end{itemize}
 		\end{itemize}
 	\item Thymeleaf template language for HTML and XML
 	\item OpenCV graphics processing library
-	\item JasperReports
-	\item Log4J which is a logging framework.
+	\item DynamicReports
+		\begin{itemize}
+			\item Allows for dynamic generation of reports meaning the system won't be stuck with a particular template as when using JasperReport (which makes use of static reports).
+			\item Allows reports to be exported to different formats such as pdf, docx, csv, html, ods, odt, xml, xlsx and may more.
+		\end{itemize}
+	\item Log4J2 which is a logging framework.
+		\begin{itemize}
+			\item Enables asynchronous logging which is good for logging within our server.
+			\item This provides us with the ability to configure the logger without restarting the server.
+		\end{itemize}
 	\item JavaFX for the creation of the registration application GUI
 \end{itemize}
 
 \subsubsection{Database}
-COSBAS will have a MongoDB database for persistence of the Biometric Data of the staff members as well as the appointment information of each staff member and the authentication keys that is generated for each appointment. \\
+COSBAS will have a MongoDB database for the persistence of the biometric data of the staff members, the appointment information of each staff member, the authentication keys that is generated for each appointment and the credential objects needed by Google Calendar. \\
 \\
 The reasons for using MongoDB:
 	\begin{itemize}
-		\item The flexible data model allows us to persist our images and sounds that will be used as the biometric data to authenticate a staff member.
+		\item It is a NoSQL database which enables us to store our objects such as the appointment objects and credentials object easily.
+		\item MongoDB also works well with Spring through SpringData.
+		\item The flexible data model allows us to persist our images (Faces and Fingerprints) that will be used as the biometric data to authenticate a staff member.
 		\item The scalability that MongoDB provides enable us to reach our scalability quality requirement (Horizontal Scaling) by the means of splitting the database up to run over two servers if we need to accomodate more staff members or visitors in the future.
 	\end{itemize}
 
