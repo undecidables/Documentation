@@ -31,12 +31,13 @@ A booking can be disapproved by a staff member. The user who made the booking wi
 
 \subsubsection{Pre-/Post-Conditions}\textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item Staff member needs to be logged into the COSBAS System to disapprove his/her own appointments.
 		\item There should be a booking before an appointment can be disapproved.
+		\item Staff member needs to be logged into the COSBAS System to disapprove his/her own appointments.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
 		\item An email notification informing the user(s), who made the booking, that the appointment has been disapproved.
+		\item The placeholder appointment on database and third-party calendar client must be removed.
 	\end{itemize}	
 
 \subsection{Process Specification for Approve and Disapprove Appointment}
