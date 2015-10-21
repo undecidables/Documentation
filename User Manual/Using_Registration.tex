@@ -2,7 +2,45 @@
 	\begin{itemize}
 		\item Logging In.
 			\begin{itemize}
-				\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Login.png}
+				\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Logon.png}
 				\item This page is used to provide authentication to the registration system. The authorised user should enter their EMPLID and password, which is then authenticated with the departments LDAP system, in order to gain access.
+			\end{itemize}
+		\item Landing Page.
+			\begin{itemize}
+				\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Landing.png}
+				\item When a user has successfully authenticated and logged into the COSBAS registration application, the user will be redirected to the landing page.
+				\item The user will be able to start a new registration process from this page or simply log out of the application.
+			\end{itemize}
+		\item Registration Process.
+			\begin{itemize}
+				\item Personal information.
+				\begin{itemize}
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Step1.png}
+					\item On this step of the registration process, the user is asked to supply his EMPLID, which is authenticated with LDAP, and their preffered email address through which communication will occur.
+				\end{itemize}
+				\item Facial Recognition Data.
+				\begin{itemize}
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Step2.png}
+					\item On this step of the registration process, the user will be asked to take images of their face that will be used to authenticate them via Facial recognition.
+					\item Once the user selects the take image button, a prompt will be given to ask if they wear glasses or not.
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Glasses.png}
+					\item Once the user has taken images, and finds that one image is not according to his/her liking, then they can click on the image to discard it and replace it with another.
+				\end{itemize}
+				
+				\item Fingerprint Recognition Data.
+				\begin{itemize}
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Step3.png}
+					\item This step will allow the user to capture fingerprint data needed for fingerprint recognition.
+					\item When taking images for fingerprint recognition, the user will be promted with a request to place a finger on the scanner.
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Step3_Finger.png}
+					\item The user will also be shown on the UI which finger they will need to place on the finger.
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Step3_finger1.png}
+				\end{itemize}
+				
+				\item Registration Completion.
+				\begin{itemize}
+					\item \includegraphics[width=\linewidth]{images/Screenshots/Registration/Reg_Step4.png}
+					\item This step will display if the registration is complete or not. If something wrong happened during registration, then a message will be shown to inform the user to retry the registration.
+				\end{itemize}
 			\end{itemize}
 	\end{itemize}
