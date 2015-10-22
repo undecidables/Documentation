@@ -45,7 +45,7 @@ Adding a new biometric device to the client.
 	\\Write a class which will control the biometric device and implements the \verb|Biometric| interface.
 	\item \textbf{Define is as a bean}
 	\\Declare the class a bean by adding the Spring  \verb!@Component! annotation to it.
-	\item \textbf{Register it on the system} \\
+	\item \textbf{Register it on the system} 
 	\\To register the biometric device, inject the bean into the Factory class and add the data retrieved from the device to the \verb|ArrayList<BiometricData> data|
 \end{enumerate}
 
@@ -84,7 +84,7 @@ Adding a new biometric device to the client.
 \item \verb!faces.imageWidth! (integer, pixels) The width in pixels detected faces are scaled to. This should not be changed after initial system setup as the face recognition algorithm requires images of the same size.
 \item \verb!faces.imageHeight! (integer, pixels) The height detected faces are scaled to. This should not be changed after initial system setup as the face recognition algorithm requires images of the same size.
 
-\item \verb!fingers.threshold! (integer, between 0 and 10) The threshold required for positive fingerprint validation. The default value of 50 is fairly low due to the algorithm used.
+\item \verb!fingers.threshold! (integer, between 0 and 100) The threshold required for positive fingerprint validation. The default value of 50 is fairly low due to the algorithm used.
 \item \verb!permissions.newSuper! (userID) If there are no Super Administrators (all privileges) in the database at system startup this user will be saved to the database as one. If an Super Admin already exists, this property will have no effect. 
 
 \item \verb!scheduling.codesCleanup! (Spring cron expression) The schedule for cleaning old temporary access codes from the database.
