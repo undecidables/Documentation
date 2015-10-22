@@ -45,6 +45,11 @@ To be documented.
 \subsubsection{Server Side}
 \begin{itemize}
 \item \verb!server.port! (port number) The port the server is running on.
+\item \verb!server.ssl.key-store=keystore.p12! (file name) The ssl keystore file, relative to the project's root directory.
+\item \verb!server.ssl.key-store-password! (string) The password of the ssl keystore.
+\item \verb!server.ssl.key-store-type=PKCS12! (string) The type of the ssl keystore 
+\item \verb!server.ssl.key-alias=jetty! (String) The alias of the SSL certificate.
+
 \item \verb!ldap.url! (url) The URL for ldap authentication
 \item \verb!ldap.base! (ldap base) The base used in ldap queries
 \item \verb!ldap.authpattern! (ldap dn pattern) The pattern for users that are allowed to log into the system. 
@@ -65,7 +70,7 @@ To be documented.
 \item \verb!request.pattern.contact.text! (regex) A Regular Expression. The names of HTTP Request parts containing contact details (for registration) should match this expression. If this is changed the Registration client should also be changed to send the correct name.
 \item \verb!request.pattern.contact.! (integer) The group number from the above mentioned pattern that matches the type of contact details
 
-\item \verb!faces.certainty! (double, between 0 and 1) The certainty required for positive face validation. It is important that the decimal point should be precede by a \\, eg. 0\\.7 
+\item \verb!faces.certainty! (double, between 0 and 1) The certainty required for positive face validation. It is important that the decimal point should be precede by a \\, eg. 0\.7 
 \item \verb!faces.classifierFile! (resource filename) The xml file that stores the data used to set up the face detection. It is a path relative to the "src/main/resources" folder. 
 \item \verb!faces.imageWidth! (integer, pixels) The width in pixels detected faces are scaled to. This should not be changed after initial system setup as the face recognition algorithm requires images of the same size.
 \item \verb!faces.imageHeight! (integer, pixels) The height detected faces are scaled to. This should not be changed after initial system setup as the face recognition algorithm requires images of the same size.
@@ -75,5 +80,6 @@ To be documented.
 
 \item \verb!scheduling.codesCleanup! (Spring cron expression) The schedule for cleaning old temporary access codes from the database.
 \item \verb!scheduling.faceTrainer! (Spring cron expression) The schedule for retraining the face recognizer. Actual training will only happen if it detects that it needs training. 
+
 \end{itemize}
 \subsubsection{Client and Registration}
