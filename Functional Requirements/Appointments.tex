@@ -20,25 +20,27 @@ A person can make a booking with one of the staff members in the department/buil
 	\end{itemize}
 
 %Vivian
-\subsection{Disapprove Appointment}
+\subsection{Deny Appointment}
 \textit{Priority: \textcolor{orange}{Important}}
 
 \subsubsection{Description}
-A booking can be disapproved by a staff member. The user who made the booking will be notified that the appointment has been disapproved. 
+A booking can be denied by a staff member. The user who made the booking and the staff member will be notified that the appointment has been denied. 
 
 \subsubsection{Use Case diagram}
-\includegraphics[width=\linewidth]{Appointments/DisapproveAppointment}
+\includegraphics[width=\linewidth]{Appointments/DenyAppointment}
 
 \subsubsection{Pre-/Post-Conditions}\textbf{Pre-conditions:} 
 	\begin{itemize}
-		\item There should be a booking before an appointment can be disapproved.
-		\item Staff member needs to be logged into the COSBAS System to disapprove his/her own appointments.
+		\item There should be a booking before an appointment can be denied.
+		\item Staff member needs to be logged into the COSBAS System to deny his/her own appointments.
 	\end{itemize}
 \textbf{ Post-conditions:} 
 	\begin{itemize}
-		\item An email notification informing the user(s), who made the booking, that the appointment has been disapproved.
-		\item The placeholder appointment on database and third-party calendar client must be removed.
+		\item An email notification informing the user(s), who made the booking, that the booking has been denied.
+		\item An email notification informing the staff member that he/she has denied the booking.
+		\item The appointment object on the database and third-party calendar client must be removed.
+		\item The appointment object in the database needs to be moved to the Cancel Appointment Collection in the database.
 	\end{itemize}	
 
-\subsection{Process Specification for Approve and Disapprove Appointment}
+\subsection{Process Specification for Approve and Deny Appointment}
 	\includegraphics[width=\linewidth]{Appointments/ApproveDisapproveAppointmentProcess}	

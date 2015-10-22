@@ -14,8 +14,8 @@ This functionality allows a user(s) of the system to request an appointment (boo
 	\end{itemize}
 \textbf{Post-conditions:} 
 	\begin{itemize}
-		\item The appointment will be saved for the staff member to approve or disapprove later on.
-		\item The user(s) will receive an appointment identifier.
+		\item The appointment will be saved for the staff member to approve or deny later on.
+		\item The user(s) will receive an notification email with an appointment identifier.
 		\item The staff member is notified of the requested appointment. 
 	\end{itemize}
 
@@ -34,7 +34,7 @@ This function allows the user to cancel an appointment they have made, or in the
 	\end{itemize}
 \textbf{Post-conditions:} 
 	\begin{itemize}
-		\item The appointment will be cancelled, that is removed from the database and third-party calendar services.
+		\item The appointment will be cancelled, that is removed from the appointment collection and moved to the cancel appointment collection in the database and third-party calendar services.
 		\item  Both parties are notified via email (But pluggable with other notifier mediums).
 		\item Access that was granted for the appointment is revoked, that is the temporary access key will be revoked. 
 	\end{itemize}
