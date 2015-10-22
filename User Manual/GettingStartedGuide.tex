@@ -7,16 +7,16 @@ To gain access to the COSBAS System through the web client you need the followin
 	\end{itemize}
 
 \subsection{Register on the System}
-If you need to register on the system you need to go to the department where they will add you to their LDAP servers such that you can login to the system. \\
+Authentication for the appointments system is through the departments existing LDAP system, no external users can access the system unless they are added to LDAP first. \\
 \\
-\textbf{Note:} Only staff members or frequent recognised members will be able to get access to the system by means of the CS username and password. If you are not such a member then you can view the web client as an guest and still make appointments as you wish.
+\textbf{Note:} Only staff members or frequent recognised members will be able to get access to the system by means of the CS username and password. If you are not such a member then you can view the website as a guest and request appointments.
 
 \subsection{Change of Login Details}
-The COSBAS System will not be able to change your username or password. To change your CS login details, which is your COSBAS login details, you need to go to the department since the COSBAS System authenticates the user through the LDAP server of the University of Pretoria.
+The COSBAS System is not be able to change your username or password. COSBAS login details are the same as your normal Computer Science login details that is managed by the department of Computer Science
 
 \subsection{General Walkthrough of the System}
 \subsubsection{COSBAS-Client}
-As mentioned in section 2.2.1, the client consists of the hardware, which is the Camera, Fingerprint Scanner, Raspberry Pi, Keypad and Pressure Mat. The client will do the biometric detection on the Raspberry Pi and will send the neccesary data to the server for the biometric autentication.\\
+As mentioned in section 2.2.1, the client consists of the hardware, which is the Camera, Fingerprint Scanner, Raspberry Pi, Keypad and Pressure Mat. The client captures the biometric data and sends it to the server for authentication.\\
 \\
 Walkthrough per Biometric/Authentication Method,
 \begin{itemize}

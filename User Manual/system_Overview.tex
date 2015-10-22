@@ -3,7 +3,15 @@
 	
 \subsection{Pinpoint Descriptions:}
 	\subsubsection{COSBAS-Client}
-	The COSBAS client is the hardware aspect of the COSBAS system. It will allow users to capture biometric data to be used as authentication for access to the department. The images are taken (be it facial, fingerprint etc.) and then sent off to the server for authentication while waiting for a response from the server to permit the access or not. Initally the COSBAS system only has the functionality of Facial Recognition and Fingerprint Identification. With facial recognition, a set of images are take but only the images with the most centered face is sent to the server for authentication purposes. If no face is detected, then the user would have to retry the process. Fingerprint images are close proximity images and hence will always be accurate enough to send it directly to the server for authentication.
+	The COSBAS client is the hardware aspect of the COSBAS system, and should deployed on  Raspberry Pi's at the entrances and exits of the departement.  It captures biometric data or access codes from the users and sends it to the server for authentication. On successful authentication the door is opened and the user is let into the department. 
+	
+	Currently the COSBAS system only has the functionality of access codes, Facial Recognition and Fingerprint Identification, but the system is highly pluggable so more  authentication methods can be added later. 
+	
+	\textbf{Facial recognition}
+	The client takes a photograph that is sent to the server. On the server the image is grayscaled and the most center face extracted for authentication. 
+	
+	\textbf{Fingerprint Recognition}
+	Fingerprint images are close proximity images and hence will always be accurate enough to send it directly to the server for authentication.
 	
 	\subsubsection{Web-Client}
 	The interface for the COSBAS system is a responsive webpage the user (authorized and temporary visitors) may use to request permission for access to the department. They can also book appointments with members of faculty on the system.
