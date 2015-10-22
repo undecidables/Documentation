@@ -51,33 +51,44 @@ Adding a new biometric device to the client.
 
 \subsection{The Properties File}
 \subsubsection{Server Side}
-%\item \verb!server.port! The port the server is running on.
-%\item \verb!ldap.url! The URL for ldap authentication
-ldap.base=ou=Computer Science,o=University of Pretoria,c=ZA
-security.basic.enabled=false
 
-mongo.address = 45.55.178.39
-mongo.port = 27017
-mongo.user = cosbasUser
-mongo.password = cosbasPass
-mongo.database = COSBAS
+\begin{itemize}
+\item \verb!server.port! (port number) The port the server is running on.
+\item \verb!server.ssl.key-store=keystore.p12! (file name) The ssl keystore file, relative to the project's root directory.
+\item \verb!server.ssl.key-store-password! (string) The password of the ssl keystore.
+\item \verb!server.ssl.key-store-type=PKCS12! (string) The type of the ssl keystore 
+\item \verb!server.ssl.key-alias=jetty! (String) The alias of the SSL certificate.
 
-codes.newlength = 6
+\item \verb!ldap.url! (url) The URL for ldap authentication
+\item \verb!ldap.base! (ldap base) The base used in ldap queries
+\item \verb!ldap.authpattern! (ldap dn pattern) The pattern for users that are allowed to log into the system. 
+\item \verb!mongo.address! (ip address) The address of the mongo database
+\item \verb!mongo.port! (number) The port the mongoDB is running on
+\item \verb!mongo.user! (string) The username for the mongoDB
+\item \verb!mongo.password! (string) The password for the mongoDB
+\item \verb!mongo.database! (string) The name of the mongoDB database
 
-google.clientSecret = vGrU3xTREin5pRTlnAdilARX
-google.clientID = 211837377506-qrmd6oco0rsakeelsisd1r4gm8gc5a57.apps.googleusercontent.com
+\item \verb!codes.newlength! (integer) The length of new access codes.
+\item \verb!codes.duplicateTries! (integer) Code generation might fail due to a duplicate code in the database. This property id amount of times the server will try to generate a new code before increasing the length. The length increase is not permanent, only for that specific code.
 
-request.pattern.biometric.text=biometric-(.*)(-\\d+)?
-request.pattern.biometric.group=1
-request.pattern.contact.text=contact-(.*)(-\\d+)?
-request.pattern.contact.group=1
+\item \verb!google.clientSecret! (string) The client secret needed for using the Google Calendar API
+\item \verb!google.clientID! (string) The clientID for using the Google Calendar API
 
-faces.certainty=0\.7
-faces.classifierFile="faces/haarcascade_frontalface_alt.xml"
-faces.imageWidth=200
-faces.imageHeight=200
+\item \verb!request.pattern.biometric.text! (regex) A Regular Expression. The names of HTTP Request parts containing biometric data should match this expression. If this is changed the clients should also be changed to send the correct name.
+\item \verb!request.pattern.biometric.group! (integer) The group number from the above mentioned pattern that matches the type of the biometric data.
+\item \verb!request.pattern.contact.text! (regex) A Regular Expression. The names of HTTP Request parts containing contact details (for registration) should match this expression. If this is changed the Registration client should also be changed to send the correct name.
+\item \verb!request.pattern.contact.! (integer) The group number from the above mentioned pattern that matches the type of contact details
 
-fingers.certainty=50
-permissions.newSuper=ALeffley
+\item \verb!faces.certainty! (double, between 0 and 1) The certainty required for positive face validation. It is important that the decimal point should be precede by a \\, eg. 0\.7 
+\item \verb!faces.classifierFile! (resource filename) The xml file that stores the data used to set up the face detection. It is a path relative to the "src/main/resources" folder. 
+\item \verb!faces.imageWidth! (integer, pixels) The width in pixels detected faces are scaled to. This should not be changed after initial system setup as the face recognition algorithm requires images of the same size.
+\item \verb!faces.imageHeight! (integer, pixels) The height detected faces are scaled to. This should not be changed after initial system setup as the face recognition algorithm requires images of the same size.
 
+\item \verb!fingers.threshold! (integer, between 0 and 10) The threshold required for positive fingerprint validation. The default value of 50 is fairly low due to the algorithm used.
+\item \verb!permissions.newSuper! (userID) If there are no Super Administrators (all privileges) in the database at system startup this user will be saved to the database as one. If an Super Admin already exists, this property will have no effect. 
+
+\item \verb!scheduling.codesCleanup! (Spring cron expression) The schedule for cleaning old temporary access codes from the database.
+\item \verb!scheduling.faceTrainer! (Spring cron expression) The schedule for retraining the face recognizer. Actual training will only happen if it detects that it needs training. 
+
+\end{itemize}
 \subsubsection{Client and Registration}
