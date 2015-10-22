@@ -39,4 +39,12 @@ Adding a new biometric validator to the system requires source code modification
 
 
 \subsubsection{Client Side}
-To be documented.
+Adding a new biometric device to the client.
+\begin{enumerate}
+	\item \textbf{Write the biometric device as a class}
+	\\Write a class which will control the biometric device and implements the \verb|Biometric| interface.
+	\item \textbf{Define is as a bean}
+	\\Declare the class a bean by adding the Spring  \verb!@Component! annotation to it.
+	\item \textbf{Register it on the system} \\
+	\\To register the biometric device, inject the bean into the Factory class and add the data retrieved from the device to the \verb|ArrayList<BiometricData> data|
+\end{enumerate}
