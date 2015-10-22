@@ -28,15 +28,15 @@ Once the user steps onto the pressure mat a signal is sent to the client which g
 Adding a new biometric validator to the system requires source code modification. 
 \begin{enumerate}
 	\item \textbf{Write the validator} \\
-	Each validator should extend the abstract \verb!AccessValidator! class in the \verb!cosbas.biometric.validators! package.
+	Each validator should extend the abstract \verb!AccessValidator! class in the \verb!cosbas.biometric.validators! package.	
+	\item \textbf{Create a preprocessor} \\ If any processing is required on the biometric data sent to the server before a BioemtricData object is created, a new \verb!BiometricPreprocessor! should also be created. If no preprocessing is required, use the existing \verb!NoProcessing! class
 	\item \textbf{Define it as a bean} \\ 
-	Declare the class a bean by adding the Spring  \verb!@Component! annotation to it.
+	Declare the validator and preprocessor classes as beans by adding the Spring  \verb!@Component! annotation right before the class definition.
 	\item \textbf{Register it on the system} \\
-	To register the biometric type on the system add it to the \verb!cosbas.biometric.biometricTypes! enum with its validator class. Eg. 
-	\verb!CODE (CodeValidator.class)!. The type should be uppercase.
+	To register the biometric type on the system add it to the \verb!cosbas.biometric.biometricTypes! enum with its validator and preprocessing class. Eg. 
+	\verb!CODE (CodeValidator.class, NoProcessing.class)!. The type should be uppercase.
 	
 \end{enumerate}
-
 
 \subsubsection{Client Side}
 Adding a new biometric device to the client.
@@ -48,3 +48,36 @@ Adding a new biometric device to the client.
 	\item \textbf{Register it on the system} \\
 	\\To register the biometric device, inject the bean into the Factory class and add the data retrieved from the device to the \verb|ArrayList<BiometricData> data|
 \end{enumerate}
+
+\subsection{The Properties File}
+\subsubsection{Server Side}
+%\item \verb!server.port! The port the server is running on.
+%\item \verb!ldap.url! The URL for ldap authentication
+ldap.base=ou=Computer Science,o=University of Pretoria,c=ZA
+security.basic.enabled=false
+
+mongo.address = 45.55.178.39
+mongo.port = 27017
+mongo.user = cosbasUser
+mongo.password = cosbasPass
+mongo.database = COSBAS
+
+codes.newlength = 6
+
+google.clientSecret = vGrU3xTREin5pRTlnAdilARX
+google.clientID = 211837377506-qrmd6oco0rsakeelsisd1r4gm8gc5a57.apps.googleusercontent.com
+
+request.pattern.biometric.text=biometric-(.*)(-\\d+)?
+request.pattern.biometric.group=1
+request.pattern.contact.text=contact-(.*)(-\\d+)?
+request.pattern.contact.group=1
+
+faces.certainty=0\.7
+faces.classifierFile="faces/haarcascade_frontalface_alt.xml"
+faces.imageWidth=200
+faces.imageHeight=200
+
+fingers.certainty=50
+permissions.newSuper=ALeffley
+
+\subsubsection{Client and Registration}
