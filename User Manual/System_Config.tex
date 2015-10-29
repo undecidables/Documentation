@@ -61,12 +61,25 @@ Adding a new biometric device to the client.
 
 \item \verb!ldap.url! (URL) The URL for LDAP authentication.
 \item \verb!ldap.base! (LDAP base) The base used in LDAP queries.
-\item \verb!ldap.authpattern! (LDAP dn pattern) The pattern for users that are allowed to log into the system. 
+\item \verb!ldap.userSearchBase! (string) Defines the starting point for searching in the directory tree, this means the server will only allow users that match the search base to login.
+
 \item \verb!mongo.address! (IP address) The address of the Mongo database.
 \item \verb!mongo.port! (port number) The port the Mongo database is running on.
 \item \verb!mongo.user! (string) The username for the Mongo database.
 \item \verb!mongo.password! (string) The password for the Mongo database.
 \item \verb!mongo.database! (string) The name of the Mongo database.
+
+\item \verb!mongo.connectionsperhost! (integer) Specifies how many connections the server may have open with the Mongo database.
+\item \verb!mongo.threadsallowedtoblockforconnectionmultiplier! (integer) Specifies the amount of threads that can block on a connection before throwing an exception.
+\item \verb!mongo.connecttimeout! (integer) Specifies connection timeout in milliseconds; this is for establishing the socket connections (open).
+\item \verb!mongo.maxwaittime! (integer) Specifies the max wait time for a blocking thread for a connection from the pool in ms.
+\item \verb!mongo.autoconnectretry! (boolean) This controls whether the system retries automatically on connection errors.
+\item \verb!mongo.socketkeepalive! (boolean) This controls whether or not to have socket keep alive turned on.
+\item \verb!mongo.sockettimeout! (integer) Specifies the socket timeout.
+\item \verb!mongo.slaveok! (boolean) Specifies if the driver is allowed to read from secondaries or slaves.
+\item \verb!mongo.writenumber! (integer) Also known as WriteConcern. Specifies the guarantee levels for reporting the success of a write operation.
+\item \verb!mongo.writetimeout! (integer) If set, the writetimeout value of WriteConcern for the connection is set to this.
+\item \verb!mongo.writefsync! (boolean) Sets the fsync value of WriteConcern for the connection.
 
 \item \verb!codes.newlength! (integer) The length of new access codes.
 \item \verb!codes.duplicateTries! (integer) Code generation might fail due to a duplicate code in the database. This property id amount of times the server will try to generate a new code before increasing the length. The length increase is not permanent, only for that specific code.
